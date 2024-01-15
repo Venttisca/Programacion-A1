@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>VE Primera práctica</title>
+    <script>
+        //Aquí va el código JavaScript
+        console.log("Hola mundo, les hablo desde JS");
+        //"console" pq le estamos hablando a la consola
+        //"." es para entrar en una parte del objeto
+        //log es esa parte a la qué queremos acceder, log es registrar
+        //"()es lo q queremos ingresar
+        console.log("//////////////////////////")
+        ////////////////////////////////////////////////////////////////////////
+
+        var a = 2;//var es para generar variables
+        var b = 4;
+        var result = a * b;
+        console.log("El resultado de la multiplicación es: " + result);// 2*4
+        //hacer otra operación con nuevas variables, una para suma, otra resta y otra división
+        var c = 4;
+        var d = 9;
+        var e = 5;
+        var f = 7;
+        var result = c + d;// 4+9
+        console.log("El resultado de la suma es: " + result);
+        var result = e - f;// 5-7
+        console.log("El resultado de la resta es: " + result);
+        var result = c / b;// 4/2
+        console.log("El resultado de la división es: " + result);
+
+        console.log("//////////////////////////")
+        /////////////////////////////////////////////////////////////////////
+//                      FUNCTION
+//      Para calcular el area del tríangulo
+        function calcAreaTriangle(base, altura) { //no olvidar las llaves para los bloques
+            var area = (base * altura) / 2;
+            return area;
+        }
+
+//                      USO DE LA FUNCTION
+        var AreaTrianguloChico = calcAreaTriangle(1.8, 0.90); //uso de la function q escribimos arriba
+        console.log("El area del tríangulo chico es: " + AreaTrianguloChico);
+
+        var AreaTrianguloMediano = calcAreaTriangle(71.6, 93.7);
+        console.log("El area del tríangulo mediano es: " + AreaTrianguloMediano);
+
+        var AreaTrianguloGrande = calcAreaTriangle(27657746.3, 15576788.36);
+        console.log("El area del tríangulo grande es: " + AreaTrianguloGrande);
+
+        console.log("//////////////////////////")
+        ////////////////////////////////////////////////////////////////////
+
+//              I   NTERACCIÓN CON EL USUARIO
+
+        function UserCalcArea() {
+            alert("Hola :D")
+            var base = campoBase.value;
+            var altura = campoAltura.value;
+            var result = calcAreaTriangle(base, altura);
+            alert(result);
+        }
+    </script>
+</head>
+<body>
+   <h1>Primeras Prácticas</h1> 
+    <p>
+        En está práctica, vermeos como funciona JS dentro del navegador
+    </p>
+    <h2> Area del Tríangulo
+    </h2>
+    <p>
+        Introduce las dimensiones del tríangulo y precina el botón para calcular su area
+    </p>
+
+    Base: <input type="number" id="campoBase" />
+    Altura: <input type="number" id="campoAltura" />
+    <button onclick="UserCalcArea()">Calcular Área</button>
+    
+</body>
+</html>
