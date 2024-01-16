@@ -63,14 +63,16 @@
 /////////// INDICE DE MASA CORPORAL /////////
 function IMC(altura,peso){
 var IMCresult = peso / (altura * altura)
+return IMCresult
 }
 
 
 function UserCalcIMC() {
-alert("el resultado es")
 var altura = campoIMCaltura.value;
 var peso = campoIMCpeso.value;
-var result = CalcIMC
+var result = IMC(altura,peso);
+alert("el resultado es " + result);
+}
 
     </script>
 </head>
