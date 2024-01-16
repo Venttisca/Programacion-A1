@@ -74,6 +74,32 @@ var result = IMC(altura,peso);
 alert("el resultado es " + result);
 }
 
+//////////////////////De Fahrenheits a celcius//////////////////////
+
+function FtoC(Fahrenheit){
+var FtoCresult = (Fahrenheit - 32) / 1.8;
+return FtoCresult
+}
+
+function UserCalcFtoC(){
+var Fahrenheit = campoFahrenheit.value;
+var result = FtoC(Fahrenheit);
+alert("el resultado es " + result + "° Celcius");
+}
+
+//////////De celcius a fahrenheiths////////
+
+function CtoF(Celcius){
+var CtoFresult = (Celcius * 1.8) + 32;
+return CtoFresult
+}
+
+function UserCalcCtoF(){
+var Celcius = campoCelcius.value;
+var result = CtoF(Celcius);
+alert("el resultado es: " + result + "° Fahrenheits);
+}
+
     </script>
 </head>
 <body>
@@ -90,6 +116,43 @@ alert("el resultado es " + result);
     Base: <input type="number" id="campoBase" />
     Altura: <input type="number" id="campoAltura" />
     <button onclick="UserCalcArea()">Calcular Área</button>
+
+<h2>Indice de masa corporal (IMC)
+</h2>
+<p>
+Ingresa tus datos para obtener tu IMC
+</p>
+
+Altura: <input type="number"
+id="campoIMCaltura" />
+
+Peso: <input type="number"
+id="campoIMCpeso" />
+
+<button onclick="UserCalcIMC()">Calcular IMC</button>
+
+<h2>Calcular de Fahrenheits a Celcius</h2>
+<p>
+Ingresa los horribles Fahrenheits para obtener hermosos Celcius
+</p>
+
+Fahrenheit: <input type="number"
+id="campoFahrenheit" />
+
+<button onclick="UserCalcFtoC">Calcular Celcius</button>
+
+<h2>Calcular de Celcius a Fahrenheits</h2>
+<p>
+Ingresa los hermoso Celcius para obtener horribles, horrendos y abominables Fahrenheits ¿Por qué alguien haría algo tan cruel? :c
+</p>
     
+Celcius: <input type="number"
+id="campoCelcius" />
+
+<button onclick="UserCalcCtoF">Calcular Farenheits</button>
+
+
+
+
 </body>
 </html>
