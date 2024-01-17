@@ -12,13 +12,18 @@
        }
 
        function consultarCuenta(){
-           panelResultado.innerHTML =
+           if (campoNip == nip) { 
+        panelResultado.innerHTML =
                miCuenta.propietario + ", " + "tienes $" + miCuenta.saldo + " en: " + miCuenta.banco;
        }
+else{ panelResultado.innerHTML = "Acceso denegado, tu nip es incorrecto";
+}
+}
 
        function retirarDinero(){
            var monto = campoMonto.value;
-           if (monto > miCuenta.saldo) {
+           if (campoNip == nip) {
+if (monto > miCuenta.saldo) {
                panelResultado.innerHTML = "No tienes el saldo suficiente para retirar esa cantidad"
            }
            else {
@@ -26,10 +31,27 @@
                panelResultado.innerHTML = "Retiraste $" + monto + ", te queda $" + miCuenta.saldo + " en tu cuenta de:"
                + miCuenta.banco
            }
+}
+else {
+panelResultado.innerHTML = "Acceso denegado, tu nip es incorrecto"
+}
        }
 
        function depositarDinero() {
            var monto = campoMonto.value;
+if(campoNip == nip) {
+if(monto > 10000000) {
+panelResultado.innerHTML = "El depósito máximo es de 10,000,000"}
+}
+else {
+miCuenta.saldo += monto;
+panelResultado.innerHTML = "Haz depositado $" + monto + " en tu cuenta bancaria, ahora hay $" + miCuenta.saldo + "en tu cuenta de " + miCuenta.banco
+}
+
+}
+else {
+panelResultado.innerHTML = "Acceso denegado, tu nip es incorrecto"
+}
            
        }
 
@@ -43,7 +65,7 @@
     </h1>
 
     Monto: <input type="number" id="campoMonto"/><br />
-    <button>Depositar</button><br />
+    <button onclick="depositarDinero()">Depositar</button><br />
     <button onclick="retirarDinero()">Retirar</button><br />
     <button onclick="consultarCuenta()">Consultar</button><br />
     <div id="panelResultado"></div>
