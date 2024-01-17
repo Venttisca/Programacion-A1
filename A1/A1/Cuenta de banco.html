@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Cuenta Bancaria</title>
+   <script>
+       var miCuenta = {
+           propietario: "María Méndez",
+           saldo: 5890.10,
+           banco: "El Banco Etterno",
+           nip: 1234,
+       }
+
+       function consultarCuenta(){
+           panelResultado.innerHTML =
+               miCuenta.propietario + ", " + "tienes $" + miCuenta.saldo + " en: " + miCuenta.banco;
+       }
+
+       function retirarDinero(){
+           var monto = campoMonto.value;
+           if (monto > miCuenta.saldo) {
+               panelResultado.innerHTML = "No tienes el saldo suficiente para retirar esa cantidad"
+           }
+           else {
+               miCuenta.saldo -= monto;
+               panelResultado.innerHTML = "Retiraste $" + monto + ", te queda $" + miCuenta.saldo + " en tu cuenta de:"
+               + miCuenta.banco
+           }
+       }
+
+       function depositarDinero() {
+           var monto = campoMonto.value;
+           
+       }
+
+       //añadir la función del nip, añadir el campo con un valor, compara el valor, debe ser igual
+
+   </script>
+</head>
+<body>
+    <h1>
+        Cuenta bancaria
+    </h1>
+
+    Monto: <input type="number" id="campoMonto"/><br />
+    <button>Depositar</button><br />
+    <button onclick="retirarDinero()">Retirar</button><br />
+    <button onclick="consultarCuenta()">Consultar</button><br />
+    <div id="panelResultado"></div>
+</body>
+</html>

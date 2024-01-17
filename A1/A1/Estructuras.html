@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        //declaro una funticon
+        function describirPersona(persona) {
+            console.log(persona.nombre + " " + persona.apellido);
+            console.log("tiene" + persona.edad + " años y mide " + persona.altura);
+        };
+        //declaro una var con estructura
+        var pepito = {
+            nombre: "José Juan",
+            apellido: "Perez Lopez",
+            edad: 54,
+            altura: 1.90,
+        };
+
+        //invoco la funcion enviandole la estructura
+        describirPersona(pepito);
+
+        var claudia = {
+            nombre: "Claudia",
+            apellido: "Contreras",
+            edad: 31,
+            altura: 1.74
+        };
+
+        describirPersona(claudia)
+        // ejmplos de esctructuras 2 de peliculas, 2 de celular, 2 libres
+
+        ///////////////////Ejercicio////////////////////////
+
+        //películas//
+        function describirPelis(pelis) {
+            console.log(pelis.name + " se estrenó en " + pelis.year + " pertenece al género "
+                + pelis.genero + " y la crítica es " + pelis.review);
+
+        };
+
+        var rango = {
+            name: "Rango",
+            year: "2011",
+            genero: "Western",
+            review: "muy buena",
+        };
+
+        describirPelis(rango)
+
+        var smallFoot = {
+            name: "SmallFoot",
+            year: "2018",
+            genero: "comedia",
+            review: "horrible, es muy olvidable",
+        };
+
+        describirPelis(smallFoot)
+
+        //celular//
+
+        function describirCelular(celular) {
+            console.log(celular.name)
+            console.log("El " + celular.name + " tiene una pantalla de " + celular.resolution + " tipo " + 
+                celular.screen + ", una cámara de " + celular.camera + " mega pixeles, con " + celular.storage
+                + "GB de almacenamiento")
+        }
+
+        var A54 = {
+            name: "Samsung A54",
+            resolution: "1080 pixeles",
+            screen: "AMOLED",
+            camera: 8,
+            storage: 64,
+        }
+
+        var A580 = {
+            name: "Samsung A80",
+            resolution: "720 pixeles",
+            screen: "AMOLED",
+            camera: 8,
+            storage: 64,
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
