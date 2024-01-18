@@ -12,7 +12,7 @@
        }
 
        function consultarCuenta(){
-           if (campoNip == nip) { 
+           if (campoNip.value == miCuenta.nip) { 
         panelResultado.innerHTML =
                miCuenta.propietario + ", " + "tienes $" + miCuenta.saldo + " en: " + miCuenta.banco;
        }
@@ -20,9 +20,9 @@ else{ panelResultado.innerHTML = "Acceso denegado, tu nip es incorrecto";
 }
 }
 
-       function retirarDinero(){
-           var monto = campoMonto.value;
-           if (campoNip == nip) {
+       function retirarDinero() {
+           var monto = parseFloat(campoMonto.value);
+           if (campoNip.value == miCuenta.nip) {
 if (monto > miCuenta.saldo) {
                panelResultado.innerHTML = "No tienes el saldo suficiente para retirar esa cantidad"
            }
@@ -37,26 +37,34 @@ panelResultado.innerHTML = "Acceso denegado, tu nip es incorrecto"
 }
        }
 
-       function depositarDinero() {
-           var monto = campoMonto.value;
-if(campoNip == nip) {
-if(monto > 10000000) {
-panelResultado.innerHTML = "El depósito máximo es de 10,000,000"}
-}
-else {
-miCuenta.saldo += monto;
-panelResultado.innerHTML = "Haz depositado $" + monto + " en tu cuenta bancaria, ahora hay $" + miCuenta.saldo + "en tu cuenta de " + miCuenta.banco
-}
+       function depositarDinero() {//abre function
+           var monto = parseFloat(campoMonto.value);
+           if (campoNip.value == miCuenta.nip) {//Abre if 1
+               if (monto > 10000000) {//abre if 2
 
-}
-else {
-panelResultado.innerHTML = "Acceso denegado, tu nip es incorrecto"
-}
-           
-       }
+                   panelResultado.innerHTML = "El depósito máximo es de $10,000,000"
+               
+           }//cierra if 2
 
+           else {//abre else 1
+               miCuenta.saldo += monto;
+               panelResultado.innerHTML = "Haz depositado $" + monto + " en tu cuenta bancaria, ahora hay $" + miCuenta.saldo + "en tu cuenta de " + miCuenta.banco
+           }//cierra else 1
+
+       }//cierra if 1
+    else {// abre else 2
+           panelResultado.innerHTML = "Acceso denegado, tu nip es incorrecto"
+       }//cierra else2
+           }//cierra function
+
+       console.log("nip:" + miCuenta.nip)
        //añadir la función del nip, añadir el campo con un valor, compara el valor, debe ser igual
 
+
+
+       function prueba() {
+           console.log(campoNip.value)
+       }
    </script>
 </head>
 <body>
@@ -64,10 +72,12 @@ panelResultado.innerHTML = "Acceso denegado, tu nip es incorrecto"
         Cuenta bancaria
     </h1>
 
+    NIP: <input type="number" id="campoNip" /><br />
     Monto: <input type="number" id="campoMonto"/><br />
     <button onclick="depositarDinero()">Depositar</button><br />
     <button onclick="retirarDinero()">Retirar</button><br />
     <button onclick="consultarCuenta()">Consultar</button><br />
     <div id="panelResultado"></div>
+
 </body>
 </html>
