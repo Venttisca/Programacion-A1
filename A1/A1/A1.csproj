@@ -69,6 +69,17 @@
   <ItemGroup>
     <Content Include="Cuenta de banco.html" />
     <Content Include="Estructuras.html" />
+    <Content Include="img\DnD characters\3DDKP17.png" />
+    <Content Include="img\DnD characters\4EzaTxj.png" />
+    <Content Include="img\DnD characters\8aGTvk9.png" />
+    <Content Include="img\DnD characters\A0VBHlW.png" />
+    <Content Include="img\DnD characters\CCu0M5w.png" />
+    <Content Include="img\DnD characters\FGRTHYD.png" />
+    <Content Include="img\DnD characters\fondo.jpg" />
+    <Content Include="img\DnD characters\GMGFDFS.png" />
+    <Content Include="img\DnD characters\HTRWW.png" />
+    <Content Include="Pelea.html" />
+    <Content Include="Persoanje.html" />
     <Content Include="index.html" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -76,6 +87,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="img\DnD characters\SDFDFGD.webp" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

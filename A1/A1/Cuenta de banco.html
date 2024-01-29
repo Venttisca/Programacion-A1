@@ -13,27 +13,27 @@
 
        function consultarCuenta(){
            if (campoNip.value == miCuenta.nip) { 
-        panelResultado.innerHTML =
+               panelResultado.innerHTML =
                miCuenta.propietario + ", " + "tienes $" + miCuenta.saldo + " en: " + miCuenta.banco;
+           }
+           else{ panelResultado.innerHTML = "Acceso denegado, tu nip es incorrecto";
+           }
        }
-else{ panelResultado.innerHTML = "Acceso denegado, tu nip es incorrecto";
-}
-}
 
        function retirarDinero() {
            var monto = parseFloat(campoMonto.value);
            if (campoNip.value == miCuenta.nip) {
-if (monto > miCuenta.saldo) {
-               panelResultado.innerHTML = "No tienes el saldo suficiente para retirar esa cantidad"
+               if (monto > miCuenta.saldo) {
+                   panelResultado.innerHTML = "No tienes el saldo suficiente para retirar esa cantidad"
+               }
+               else {
+
+                   miCuenta.saldo -= monto;
+                   panelResultado.innerHTML = "Retiraste $" + monto + ", te queda $" + miCuenta.saldo + " en tu cuenta de:" + miCuenta.banco
+               }
            }
            else {
-               miCuenta.saldo -= monto;
-               panelResultado.innerHTML = "Retiraste $" + monto + ", te queda $" + miCuenta.saldo + " en tu cuenta de:"
-               + miCuenta.banco
-           }
-}
-else {
-panelResultado.innerHTML = "Acceso denegado, tu nip es incorrecto"
+               panelResultado.innerHTML = "Acceso denegado, tu nip es incorrecto"
 }
        }
 

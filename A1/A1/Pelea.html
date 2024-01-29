@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>pelea DnD</title>
+    <script>
+
+        function caballeroAtaca() {
+            if (orco.hp > 0) {
+                console.log("El caballero ataca");
+
+                orco.hp = orco.hp - (caballero.atk - orco.def)
+                console.log(orco.nombre + " tiene " + orco.hp + " de HP")
+            }
+            else {
+                alert("El Orco ha muerto")
+            }
+        }
+
+        var orco = {
+            nombre: "Orco Guerrero",
+            hp: 30,
+            atk: 20,
+            def: 5,
+        }
+
+        var caballero = {
+            nombre: "Orco Guerrero",
+            hp: 70,
+            atk: 10,
+            def: 20,
+        }
+        
+
+    </script>
+    <style>
+        /*aquí empieza el código CSS*/
+        #calabozo {
+            width: 900px;
+            height: 900px;
+            background-image: url("img/DnD characters/fondo.jpg");
+            position: relative;
+        }
+
+        .personaje{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+        #orco {
+            left: 200px;
+            top: 250px;
+        }
+
+        #guerrera {
+            left: 500px;
+            top: 250px;
+
+        }
+
+        #caballero {
+            left: 350px;
+            top: 500px;
+            transform:rotate(180);
+        }
+   
+    </style>
+</head>
+<body>
+    <div id="calabozo">
+        <img id="orco" 
+             class="personaje" 
+             src="img/DnD characters/3DDKP17.png" 
+             "
+             />
+        <img id="guerrera" class="personaje" src="img/dnd characters/a0vbhlw.png" />
+        <img id="caballero" 
+             class="personaje" 
+             src="img/DnD characters/4EzaTxj.png"
+             onclick="caballeroAtaca()"
+             />
+    </div>
+</body>
+</html>
