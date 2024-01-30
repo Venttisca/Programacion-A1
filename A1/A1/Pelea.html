@@ -5,16 +5,131 @@
     <title>pelea DnD</title>
     <script>
 
+        ///CONTADORES DE XP
+        var xpContador1 = 0;//Contador del caballero
+        var xpContador2 = 0;//COntador de la guerrera
+        var xpContadorTotal = 0; //Suma total de los contadores de xp        
+        var xpProporcion1 = 0;
+        var xpProporcion2 = 0;
+
+        var lastAtk = 0; // 0 = no ataca, 1 = ataca caballero, 2 = ataca guerrera
+
+
         function caballeroAtaca() {
             if (orco.hp > 0) {
-                console.log("El caballero ataca");
+                console.log(caballero.nombre + " ataca");
 
-                orco.hp = orco.hp - (caballero.atk - orco.def)
-                console.log(orco.nombre + " tiene " + orco.hp + " de HP")
+                //Ataque
+                orco.hp = orco.hp - (caballero.atk - orco.def);
+                console.log(orco.nombre + " tiene " + orco.hp + " de HP");
+
+                //Contador de xp
+                xpContador1 = xpContador1 + (caballero.atk - orco.def);
+
+                //Venganza
+                lastAtk = 1;
+
+                console.log("xpContador 1: " + xpContador1);
+
             }
             else {
-                alert("El Orco ha muerto")
+                alert("Error, El Orco ha muerto" + orco.hp)
             }
+            if (orco.hp <= 0) {
+                console.log("xpContador 1: " + xpContador1);
+
+                //XP CALCULO
+                xpContadorTotal = xpContador1 + xpContador2;
+                xpProporcion1 = xpContador1 / xpContadorTotal;
+                xpProporcion2 = xpContador2 / xpContadorTotal;
+
+                console.log("XP CALCULO xpContador 1: " + xpContador1);
+                console.log("XP CALCULO xpProporcion1: " + xpProporcion1);
+
+                //XP repartir
+                console.log("XP REPARTIR orco.xp: " + orco.xp);
+                caballero.xp = orco.xp * xpProporcion1;
+                guerrera.xp = orco.xp * xpProporcion2;
+                console.log("XP REPARTIR xpContador 1: " + xpContador1);
+
+
+                alert("Ganaste, has derrotado a " + orco.nombre + ", " + caballero.nombre + " obtiene " + caballero.xp + "xp, " + guerrera.nombre + " obtiene " + guerrera.xp + "xp")
+
+
+                console.log("xp de " + caballero.nombre + " = " + caballero.xp)
+
+                xpContador1 = 0;
+                xpContador2 = 0;
+                lastAtk = 0;
+            }
+            else { }
+        }
+
+        function guerreraAtaca() {
+            if (orco.hp > 0) {
+                console.log(guerrera.nombre + " ataca");
+
+                //Ataque
+                orco.hp = orco.hp - (guerrera.atk - orco.def);
+                console.log(orco.nombre + " tiene " + orco.hp + " de HP");
+
+                //Contador de xp
+                xpContador2 = xpContador2 + (guerrera.atk - orco.def);
+
+                //Venganza
+                lastAtk = 2;
+            }
+            else {
+                alert("Error, El Orco ha muerto " + orco.hp)
+            }
+            if (orco.hp <= 0) {
+                console.log("xpContador 2: " + xpContador2);
+ 
+                //XP CALCULO
+                xpContadorTotal = xpContador1 + xpContador2;
+                xpProporcion1 = xpContador1 / xpContadorTotal;
+                xpProporcion2 = xpContador2 / xpContadorTotal;
+
+                //XP repartir
+                caballero.xp = orco.xp * xpProporcion1;
+                guerrera.xp = orco.xp * xpProporcion2;
+
+
+                alert("Ganaste, has derrotado a " + orco.nombre + ", " + caballero.nombre + " obtiene " + caballero.xp + "xp, " + guerrera.nombre + " obtiene " + guerrera.xp + "xp")
+                
+
+                console.log("xp de " + guerrera.nombre + " = " + guerrera.xp)
+
+                xpContador1 = 0;
+                xpContador2 = 0;
+                lastAtk = 0;
+
+            }
+            else { }
+        }
+
+        function venganzaOrco() {
+            if (orco.hp == 0) { ///ORCO MUERTO caso
+                alert("Los muertos no guardan rencor");
+            }
+            else { }
+
+            if (lastAtk == 0) { ///ORCO NO ATACADO caso
+                alert(orco.nombre + " no guarda rencor")
+            }
+            else { }
+
+            if (lastAtk == 1) {///LAST HIT CABALLERO caso
+                alert(orco.nombre + " atacó a " + caballero.nombre + " le ha quitado " + (caballero.hp - (orco.atk - caballero.def)) + "hp");
+                caballero.hp = caballero.hp - (orco.atk - caballero.def);
+            }
+            else { }
+
+            if (lastAtk == 2) {///LAST HIT GUERRERA caso
+                alert(orco.nombre + " atacó a " + guerrera.nombre + " le ha quitado " + (guerrera.hp - (orco.atk - guerrera.def)) + "hp");
+                guerrera.hp = guerrera.hp - (orco.atk - guerrera.def);
+            }
+            else { }
         }
 
         var orco = {
@@ -22,15 +137,25 @@
             hp: 30,
             atk: 20,
             def: 5,
+            xp: 50,
         }
 
         var caballero = {
-            nombre: "Orco Guerrero",
+            nombre: "Caballero",
             hp: 70,
             atk: 10,
             def: 20,
+            xp: 0,
         }
-        
+
+        var guerrera = {
+            nombre: "guerrera",
+            hp: 40,
+            atk: 20,
+            def: 15,
+            xp: 0,
+
+        }
 
     </script>
     <style>
@@ -40,6 +165,10 @@
             height: 900px;
             background-image: url("img/DnD characters/fondo.jpg");
             position: relative;
+
+            /*arreglando el fondo*/
+            background-size:contain;
+            background-repeat:no-repeat;
         }
 
         .personaje{
@@ -48,20 +177,21 @@
             position: absolute;
         }
         #orco {
-            left: 200px;
-            top: 250px;
+            left: 390px;
+            top: 230px;
         }
 
         #guerrera {
-            left: 500px;
-            top: 250px;
+            left: 240px;
+            top: 420px;
+            transform:rotate(210deg)
 
         }
 
         #caballero {
-            left: 350px;
-            top: 500px;
-            transform:rotate(180);
+            left: 540px;
+            top: 420px;
+            transform:rotate(150deg);
         }
    
     </style>
@@ -71,9 +201,14 @@
         <img id="orco" 
              class="personaje" 
              src="img/DnD characters/3DDKP17.png" 
-             "
+             onclick="venganzaOrco()"
              />
-        <img id="guerrera" class="personaje" src="img/dnd characters/a0vbhlw.png" />
+        <img id="guerrera" 
+             class="personaje" 
+             src="img/dnd characters/a0vbhlw.png"
+             onclick="guerreraAtaca()"
+             />
+
         <img id="caballero" 
              class="personaje" 
              src="img/DnD characters/4EzaTxj.png"
