@@ -11,6 +11,13 @@
            nip: 1234,
        }
 
+       function consultarCuentaNip() {
+           if (campoNip.value != miCuenta.nip) {
+               alert("NIP INcorrecto");
+               return;
+           }
+       }
+
        function consultarCuenta(){
            if (campoNip.value == miCuenta.nip) { 
                panelResultado.innerHTML =

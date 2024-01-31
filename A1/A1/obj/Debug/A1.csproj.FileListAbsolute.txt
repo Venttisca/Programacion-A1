@@ -177,3 +177,4 @@ C:\Users\ventt.DESKTOP-1PKA4SU\Desktop\Git\Programacion-A1\A1\A1\obj\Debug\A1.cs
 C:\Users\ventt.DESKTOP-1PKA4SU\Desktop\Git\Programacion-A1\A1\A1\obj\Debug\A1.csproj.CopyComplete
 C:\Users\ventt.DESKTOP-1PKA4SU\Desktop\Git\Programacion-A1\A1\A1\obj\Debug\A1.dll
 C:\Users\ventt.DESKTOP-1PKA4SU\Desktop\Git\Programacion-A1\A1\A1\obj\Debug\A1.pdb
+C:\Users\gs202331273\Documents\GitHub\Programacion-A1\A1\A1\bin\roslyn\desktop.ini

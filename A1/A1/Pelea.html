@@ -133,13 +133,13 @@
         }
 
         function venganzaOrco() {
-            if (orco.hp == 0)
+            if (orco.hp <= 0 && orco.vivo == false)
             { ///ORCO MUERTO caso
                 alert("Los muertos no guardan rencor");
             }
             else { }
 
-            if (lastAtk == 0)
+            if (lastAtk == 0 && orco.vivo == true)
             { ///ORCO NO ATACADO caso
                 alert(orco.nombre + " no guarda rencor");
             }

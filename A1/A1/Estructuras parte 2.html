@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Relaciones entre estruscturas</title>
+    <script>
+// DIagramas de objetos
+        /////////////////////////////////////////////////////////////////////////////Ejemplo de esctructuras en las estructuras, o cita de estructuras/////////////////////////////////////////////////////
+        //Caso Malfoy
+        var cruxio = {
+            conjuro: "Cruxioo",
+            efecto: "tortura",
+        }
+
+        var ak = {
+            conjuro: "Avada Kadabra",
+            efecto: "matar",
+        }
+
+        var slitherin = {
+            nombre: "Slitherin",
+            emblema: "Serpiente",
+        }
+
+        var draco = {
+            nombre: "Draco",
+            apellido: "Malfoy",
+            casa: slitherin,
+            hechizoFav: cruxio,
+        }
+
+        console.log(draco.nombre + " " + draco.apellido + " pertenece a la casa " + draco.casa.nombre + " cuyo emblema es " + draco.casa.emblema + ", y su hechizo preferido es " + draco.hechizoFav.conjuro);
+
+        //Caso Bellatrix
+        var belatrix = {
+            nombre: "Bellatrix",
+            apellido: "Lestrange",
+            casa: slitherin,
+            hechizoFav: ak,
+        }
+        ////////////////////////////////////////////////////////////////////                  Ejercicio de clase               ////////////////////////////////////////////////////////////////////
+
+        // CASAS
+
+        var grifindor = {
+            nombre: "Gryfindor",
+            emblema: "León",
+        }
+
+        var revenclaw = {
+            nombre: "Revenclaw",
+            emblema: "Una copa o algo así, no c",
+        }
+
+        // HECHIZOS
+
+        var desmayo = {
+            conjuro: "Desmayo",
+            efecto: "desmaya al objetivo",
+        }
+
+        var bombarda = {
+            conjuro: "Bombarda",
+            efecto: "crea una explosión",
+        }
+
+        var lumus = {
+            conjuro: "Lumus",
+            efecto: "invoca un orbe de luz",
+        }
+
+        // PERSONAJES
+
+        var harry = {
+            nombre: "Harry",
+            apellido: "Potter",
+            casa: grifindor,
+            hechizoFav: lumus,
+        }
+
+        var germione = {
+            nombre: "Germione",
+            apellido: "Grenger",
+            casa: grifindor,
+            hechizoFav: bombarda,
+        }
+
+        var lucy = {
+            nombre: "Lucy",
+            apellido: "Sato",
+            casa: revenclaw,
+            hechizoFav: desmayo,
+        }
+
+        var gina = {//por referencia
+            nombre: "Gina",
+            apellido: "Lance",
+            casa: revenclaw,
+            hechizoFav: lumus,
+        }
+
+        console.log(harry.nombre + " " + harry.apellido + " pertenece a la casa " + harry.casa.nombre + " cuyo emblema es " + harry.casa.emblema + ", y su hechizo preferido es " + harry.hechizoFav.conjuro);
+
+        console.log(germione.nombre + " " + germione.apellido + " pertenece a la casa " + germione.casa.nombre + " cuyo emblema es " + germione.casa.emblema + ", y su hechizo preferido es " + germione.hechizoFav.conjuro);
+
+        console.log(lucy.nombre + " " + lucy.apellido + " pertenece a la casa " + lucy.casa.nombre + " cuyo emblema es " + lucy.casa.emblema + ", y su hechizo preferido es " + lucy.hechizoFav.conjuro);
+
+        console.log(gina.nombre + " " + gina.apellido + " pertenece a la casa " + gina.casa.nombre + " cuyo emblema es " + gina.casa.emblema + ", y su hechizo preferido es " + gina.hechizoFav.conjuro);
+
+
+        ///////////////////////             OBSERVEN           ///////////////////////
+
+        function presentarMago(mago) {
+            console.log(mago.nombre + " " + mago.apellido + " pertenece a la casa " + mago.casa.nombre + " cuyo emblema es " + mago.casa.emblema + ", y su hechizo preferido es " + mago.hechizoFav.conjuro);
+
+        }
+
+        presentarMago(draco);//   EFICIENCIAAAAAAAAAAAAAAAAA!!!!!
+        presentarMago(belatrix);
+        presentarMago(harry);
+
+        //////////////////////////                EJERCICIOS          ////////////
+        console.log("////////////////////////////")
+
+
+        // PRESENTAR HECHIZOS
+        function presentarHechizo(hechizo) {
+            console.log(hechizo.conjuro + " es un hechizo que hace el siguiente efecto: " + hechizo.efecto);
+
+        }
+
+        presentarHechizo(lumus);
+
+        // PRESENTAR CASAS
+
+        function presentarCasa(casa) {
+            console.log(casa.nombre + " es la casa respresentada por el siguiente animal: " + casa.emblema);
+        }
+
+        presentarCasa(grifindor);
+
+
+
+        ///por valor
+        var peso = 50
+        var weight = peso
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>
