@@ -16,9 +16,12 @@
         var lastAtk = 0; // 0 = no ataca, 1 = ataca caballero, 2 = ataca guerrera
 
 
-        function caballeroAtaca() {
-            if (caballero.hp > 0) {
-                if (orco.hp > 0) {
+        function caballeroAtaca()
+        {
+            if (caballero.hp > 0)
+            {
+                if (orco.hp > 0)
+                {
                     console.log(caballero.nombre + " ataca");
 
                     //Ataque
@@ -34,10 +37,12 @@
       //              console.log("xpContador 1: " + xpContador1);
 
                 }
-                else {
-                    alert("Error, El Orco ha muerto" + orco.hp)
+                else
+                {
+                    alert("Error, El Orco ha muerto" + orco.hp);
                 }
-                if (orco.hp <= 0 && orco.vivo == true) {
+                if (orco.hp <= 0 && orco.vivo == true)
+                {
      //               console.log("xpContador 1: " + xpContador1);
 
                     //XP CALCULO
@@ -55,7 +60,7 @@
        //             console.log("XP REPARTIR xpContador 1: " + xpContador1);
 
 
-                    alert("Ganaste, has derrotado a " + orco.nombre + ", " + caballero.nombre + " obtiene " + caballero.xp + "xp, " + guerrera.nombre + " obtiene " + guerrera.xp + "xp")
+                    alert("Ganaste, has derrotado a " + orco.nombre + ", " + caballero.nombre + " obtiene " + caballero.xp + "xp, " + guerrera.nombre + " obtiene " + guerrera.xp + "xp");
 
 
       //              console.log("xp de " + caballero.nombre + " = " + caballero.xp)
@@ -67,15 +72,18 @@
                 }
                 else { }
             }
-            else {
-                alert("Los muertos no pelean")
+            else
+            {
+                alert("Los muertos no pelean");
             }
         }
 
         function guerreraAtaca()
         {
-            if (guerrera.hp > 0) {
-                if (orco.hp > 0) {
+            if (guerrera.hp > 0)
+            {
+                if (orco.hp > 0)
+                {
                     console.log(guerrera.nombre + " ataca");
 
                     //Ataque
@@ -88,10 +96,12 @@
                     //Venganza
                     lastAtk = 2;
                 }
-                else {
-                    alert("Error, El Orco ha muerto " + orco.hp)
+                else
+                {
+                    alert("Error, El Orco ha muerto " + orco.hp);
                 }
-                if (orco.hp <= 0 && orco.vivo == true) {
+                if (orco.hp <= 0 && orco.vivo == true)
+                {
     //                console.log("xpContador 2: " + xpContador2);
 
                     //XP CALCULO
@@ -104,7 +114,7 @@
                     guerrera.xp = orco.xp * xpProporcion2;
 
 
-                    alert("Ganaste, has derrotado a " + orco.nombre + ", " + caballero.nombre + " obtiene " + caballero.xp + "xp, " + guerrera.nombre + " obtiene " + guerrera.xp + "xp")
+                    alert("Ganaste, has derrotado a " + orco.nombre + ", " + caballero.nombre + " obtiene " + caballero.xp + "xp, " + guerrera.nombre + " obtiene " + guerrera.xp + "xp");
 
 
    //                 console.log("xp de " + guerrera.nombre + " = " + guerrera.xp)
@@ -118,56 +128,67 @@
                 else { }
             }
             else {
-                alert("Los muertos no pelean")
+                alert("Los muertos no pelean");
             }
         }
 
         function venganzaOrco() {
-            if (orco.hp == 0) { ///ORCO MUERTO caso
+            if (orco.hp == 0)
+            { ///ORCO MUERTO caso
                 alert("Los muertos no guardan rencor");
             }
             else { }
 
-            if (lastAtk == 0) { ///ORCO NO ATACADO caso
-                alert(orco.nombre + " no guarda rencor")
+            if (lastAtk == 0)
+            { ///ORCO NO ATACADO caso
+                alert(orco.nombre + " no guarda rencor");
             }
             else { }
 
-            if (lastAtk == 1) {///LAST HIT CABALLERO caso
-                if (caballero.vivo == true) {
+            if (lastAtk == 1)
+            {///LAST HIT CABALLERO caso
+                if (caballero.vivo == true)
+                {
                     console.log(orco.nombre + " atacó a " + caballero.nombre + " ahora le quedan " + (caballero.hp - (orco.atk - caballero.def)) + "hp");
                     caballero.hp = caballero.hp - (orco.atk - caballero.def);
                 }
-                else {
+                else
+                {
                     console.log(orco.nombre + " no le guarda rencor a los muertos")
                 }
             }
             else { }
 
-            if (lastAtk == 2) {///LAST HIT GUERRERA caso
-                if (guerrera.vivo == true) {
+            if (lastAtk == 2)
+            {///LAST HIT GUERRERA caso
+                if (guerrera.vivo == true)
+                {
                     console.log(orco.nombre + " atacó a " + guerrera.nombre + " ahora le quedan " + (guerrera.hp - (orco.atk - guerrera.def)) + "hp");
                     guerrera.hp = guerrera.hp - (orco.atk - guerrera.def);
                 }
-                else {
-                    console.log(orco.nombre + " no le guarda rencor a los muertos")
+                else
+                {
+                    console.log(orco.nombre + " no le guarda rencor a los muertos");
                 }
             }
             else { }
 
-            if (caballero.hp <= 0 && caballero.vivo == true) {//CABALLERO MUERE caso
-                alert(caballero.nombre + " ha muerto")
+            if (caballero.hp <= 0 && caballero.vivo == true)
+            {//CABALLERO MUERE caso
+                alert(caballero.nombre + " ha muerto");
                 caballero.vivo = false;
             }
             else { }
 
-            if (guerrera.hp <= 0 && guerrera.vivo == true) {//GUERREA MUERE caso
+            if (guerrera.hp <= 0 && guerrera.vivo == true)
+            {//GUERREA MUERE caso
                 alert(guerrera.nombre + " ha muerto");
                 guerrera.vivo = false;
             }
             else { }
 
-            if (caballero.vivo == false && guerrera.vivo == false) {
+            if (caballero.vivo == false && guerrera.vivo == false)
+            {
                 alert("Has perdido, todos tus personajes murieron");
             }
         }
@@ -203,7 +224,8 @@
     </script>
     <style>
         /*aquí empieza el código CSS*/
-        #calabozo {
+        #calabozo 
+        {
             width: 900px;
             height: 900px;
             background-image: url("img/DnD characters/fondo.jpg");
@@ -214,24 +236,28 @@
             background-repeat:no-repeat;
         }
 
-        .personaje{
+        .personaje
+        {
             width: 100px;
             height: 100px;
             position: absolute;
         }
-        #orco {
+        #orco 
+        {
             left: 390px;
             top: 230px;
         }
 
-        #guerrera {
+        #guerrera
+        {
             left: 240px;
             top: 420px;
             transform:rotate(210deg)
 
         }
 
-        #caballero {
+        #caballero 
+        {
             left: 540px;
             top: 420px;
             transform:rotate(150deg);
