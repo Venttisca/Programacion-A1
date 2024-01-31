@@ -12,100 +12,114 @@
         var xpProporcion1 = 0;
         var xpProporcion2 = 0;
 
+
         var lastAtk = 0; // 0 = no ataca, 1 = ataca caballero, 2 = ataca guerrera
 
 
         function caballeroAtaca() {
-            if (orco.hp > 0) {
-                console.log(caballero.nombre + " ataca");
+            if (caballero.hp > 0) {
+                if (orco.hp > 0) {
+                    console.log(caballero.nombre + " ataca");
 
-                //Ataque
-                orco.hp = orco.hp - (caballero.atk - orco.def);
-                console.log(orco.nombre + " tiene " + orco.hp + " de HP");
+                    //Ataque
+                    orco.hp = orco.hp - (caballero.atk - orco.def);
+                    console.log(orco.nombre + " ahora tiene " + orco.hp + " de HP");
 
-                //Contador de xp
-                xpContador1 = xpContador1 + (caballero.atk - orco.def);
+                    //Contador de xp
+                    xpContador1 = xpContador1 + (caballero.atk - orco.def);
 
-                //Venganza
-                lastAtk = 1;
+                    //Venganza
+                    lastAtk = 1;
 
-                console.log("xpContador 1: " + xpContador1);
+      //              console.log("xpContador 1: " + xpContador1);
 
+                }
+                else {
+                    alert("Error, El Orco ha muerto" + orco.hp)
+                }
+                if (orco.hp <= 0 && orco.vivo == true) {
+     //               console.log("xpContador 1: " + xpContador1);
+
+                    //XP CALCULO
+                    xpContadorTotal = xpContador1 + xpContador2;
+                    xpProporcion1 = xpContador1 / xpContadorTotal;
+                    xpProporcion2 = xpContador2 / xpContadorTotal;
+
+      //              console.log("XP CALCULO xpContador 1: " + xpContador1);
+      //              console.log("XP CALCULO xpProporcion1: " + xpProporcion1);
+
+                    //XP repartir
+      //              console.log("XP REPARTIR orco.xp: " + orco.xp);
+                    caballero.xp = orco.xp * xpProporcion1;
+                    guerrera.xp = orco.xp * xpProporcion2;
+       //             console.log("XP REPARTIR xpContador 1: " + xpContador1);
+
+
+                    alert("Ganaste, has derrotado a " + orco.nombre + ", " + caballero.nombre + " obtiene " + caballero.xp + "xp, " + guerrera.nombre + " obtiene " + guerrera.xp + "xp")
+
+
+      //              console.log("xp de " + caballero.nombre + " = " + caballero.xp)
+
+                    xpContador1 = 0;
+                    xpContador2 = 0;
+                    lastAtk = 0;
+                    orco.vivo = false;
+                }
+                else { }
             }
             else {
-                alert("Error, El Orco ha muerto" + orco.hp)
+                alert("Los muertos no pelean")
             }
-            if (orco.hp <= 0) {
-                console.log("xpContador 1: " + xpContador1);
-
-                //XP CALCULO
-                xpContadorTotal = xpContador1 + xpContador2;
-                xpProporcion1 = xpContador1 / xpContadorTotal;
-                xpProporcion2 = xpContador2 / xpContadorTotal;
-
-                console.log("XP CALCULO xpContador 1: " + xpContador1);
-                console.log("XP CALCULO xpProporcion1: " + xpProporcion1);
-
-                //XP repartir
-                console.log("XP REPARTIR orco.xp: " + orco.xp);
-                caballero.xp = orco.xp * xpProporcion1;
-                guerrera.xp = orco.xp * xpProporcion2;
-                console.log("XP REPARTIR xpContador 1: " + xpContador1);
-
-
-                alert("Ganaste, has derrotado a " + orco.nombre + ", " + caballero.nombre + " obtiene " + caballero.xp + "xp, " + guerrera.nombre + " obtiene " + guerrera.xp + "xp")
-
-
-                console.log("xp de " + caballero.nombre + " = " + caballero.xp)
-
-                xpContador1 = 0;
-                xpContador2 = 0;
-                lastAtk = 0;
-            }
-            else { }
         }
 
-        function guerreraAtaca() {
-            if (orco.hp > 0) {
-                console.log(guerrera.nombre + " ataca");
+        function guerreraAtaca()
+        {
+            if (guerrera.hp > 0) {
+                if (orco.hp > 0) {
+                    console.log(guerrera.nombre + " ataca");
 
-                //Ataque
-                orco.hp = orco.hp - (guerrera.atk - orco.def);
-                console.log(orco.nombre + " tiene " + orco.hp + " de HP");
+                    //Ataque
+                    orco.hp = orco.hp - (guerrera.atk - orco.def);
+                    console.log(orco.nombre + " ahora tiene " + orco.hp + " de HP");
 
-                //Contador de xp
-                xpContador2 = xpContador2 + (guerrera.atk - orco.def);
+                    //Contador de xp
+                    xpContador2 = xpContador2 + (guerrera.atk - orco.def);
 
-                //Venganza
-                lastAtk = 2;
+                    //Venganza
+                    lastAtk = 2;
+                }
+                else {
+                    alert("Error, El Orco ha muerto " + orco.hp)
+                }
+                if (orco.hp <= 0 && orco.vivo == true) {
+    //                console.log("xpContador 2: " + xpContador2);
+
+                    //XP CALCULO
+                    xpContadorTotal = xpContador1 + xpContador2;
+                    xpProporcion1 = xpContador1 / xpContadorTotal;
+                    xpProporcion2 = xpContador2 / xpContadorTotal;
+
+                    //XP repartir
+                    caballero.xp = orco.xp * xpProporcion1;
+                    guerrera.xp = orco.xp * xpProporcion2;
+
+
+                    alert("Ganaste, has derrotado a " + orco.nombre + ", " + caballero.nombre + " obtiene " + caballero.xp + "xp, " + guerrera.nombre + " obtiene " + guerrera.xp + "xp")
+
+
+   //                 console.log("xp de " + guerrera.nombre + " = " + guerrera.xp)
+
+                    xpContador1 = 0;
+                    xpContador2 = 0;
+                    lastAtk = 0;
+                    orco.vivo = false;
+
+                }
+                else { }
             }
             else {
-                alert("Error, El Orco ha muerto " + orco.hp)
+                alert("Los muertos no pelean")
             }
-            if (orco.hp <= 0) {
-                console.log("xpContador 2: " + xpContador2);
- 
-                //XP CALCULO
-                xpContadorTotal = xpContador1 + xpContador2;
-                xpProporcion1 = xpContador1 / xpContadorTotal;
-                xpProporcion2 = xpContador2 / xpContadorTotal;
-
-                //XP repartir
-                caballero.xp = orco.xp * xpProporcion1;
-                guerrera.xp = orco.xp * xpProporcion2;
-
-
-                alert("Ganaste, has derrotado a " + orco.nombre + ", " + caballero.nombre + " obtiene " + caballero.xp + "xp, " + guerrera.nombre + " obtiene " + guerrera.xp + "xp")
-                
-
-                console.log("xp de " + guerrera.nombre + " = " + guerrera.xp)
-
-                xpContador1 = 0;
-                xpContador2 = 0;
-                lastAtk = 0;
-
-            }
-            else { }
         }
 
         function venganzaOrco() {
@@ -120,16 +134,42 @@
             else { }
 
             if (lastAtk == 1) {///LAST HIT CABALLERO caso
-                alert(orco.nombre + " atacó a " + caballero.nombre + " le ha quitado " + (caballero.hp - (orco.atk - caballero.def)) + "hp");
-                caballero.hp = caballero.hp - (orco.atk - caballero.def);
+                if (caballero.vivo == true) {
+                    console.log(orco.nombre + " atacó a " + caballero.nombre + " ahora le quedan " + (caballero.hp - (orco.atk - caballero.def)) + "hp");
+                    caballero.hp = caballero.hp - (orco.atk - caballero.def);
+                }
+                else {
+                    console.log(orco.nombre + " no le guarda rencor a los muertos")
+                }
             }
             else { }
 
             if (lastAtk == 2) {///LAST HIT GUERRERA caso
-                alert(orco.nombre + " atacó a " + guerrera.nombre + " le ha quitado " + (guerrera.hp - (orco.atk - guerrera.def)) + "hp");
-                guerrera.hp = guerrera.hp - (orco.atk - guerrera.def);
+                if (guerrera.vivo == true) {
+                    console.log(orco.nombre + " atacó a " + guerrera.nombre + " ahora le quedan " + (guerrera.hp - (orco.atk - guerrera.def)) + "hp");
+                    guerrera.hp = guerrera.hp - (orco.atk - guerrera.def);
+                }
+                else {
+                    console.log(orco.nombre + " no le guarda rencor a los muertos")
+                }
             }
             else { }
+
+            if (caballero.hp <= 0 && caballero.vivo == true) {//CABALLERO MUERE caso
+                alert(caballero.nombre + " ha muerto")
+                caballero.vivo = false;
+            }
+            else { }
+
+            if (guerrera.hp <= 0 && guerrera.vivo == true) {//GUERREA MUERE caso
+                alert(guerrera.nombre + " ha muerto");
+                guerrera.vivo = false;
+            }
+            else { }
+
+            if (caballero.vivo == false && guerrera.vivo == false) {
+                alert("Has perdido, todos tus personajes murieron");
+            }
         }
 
         var orco = {
@@ -138,14 +178,16 @@
             atk: 20,
             def: 5,
             xp: 50,
+            vivo: true,
         }
 
         var caballero = {
             nombre: "Caballero",
             hp: 70,
             atk: 10,
-            def: 20,
+            def: 15,
             xp: 0,
+            vivo: true,
         }
 
         var guerrera = {
@@ -154,6 +196,7 @@
             atk: 20,
             def: 15,
             xp: 0,
+            vivo: true,
 
         }
 

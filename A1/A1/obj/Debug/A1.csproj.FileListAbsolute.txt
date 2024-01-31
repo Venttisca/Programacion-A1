@@ -116,3 +116,4 @@ C:\Venttisca Etterna\Storage\Vectoria\GitHub\Programacion-A1\A1\A1\obj\Debug\A1.
 C:\Venttisca Etterna\Storage\Vectoria\GitHub\Programacion-A1\A1\A1\obj\Debug\A1.csproj.CopyComplete
 C:\Venttisca Etterna\Storage\Vectoria\GitHub\Programacion-A1\A1\A1\obj\Debug\A1.dll
 C:\Venttisca Etterna\Storage\Vectoria\GitHub\Programacion-A1\A1\A1\obj\Debug\A1.pdb
+C:\Venttisca Etterna\Storage\Vectoria\GitHub\Programacion-A1\A1\A1\bin\roslyn\desktop.ini
