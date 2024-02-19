@@ -1,9 +1,35 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <title>VE Primera práctica</title>
+    <meta chaset="utf-8" />
+    <title>US</title>
     <script>
+
+var precio = 250
+var clienteFrecuente = true;
+var esMonedaLocal = false;
+
+console.log("Precio base " + (esMonedaLocal ? "MXN" : "USD") + precio);
+
+if (precio > 100) {
+   if(clienteFrecuente){
+      precio = precio * 0.5;
+      console.log("Alpica 50% de descuento por ser cliente frecuente");
+   }
+   else{
+      precio = precio * 0.90;
+      consle.log("Aplica descuento de 10%");
+   }
+}
+else if (precio > 80) {
+   precio = precio * 0.85;
+   console.log("Aplica descuento de 15%");
+}
+else {
+   console.log("No tengo descuento prro");
+   }
+
+console.log("Precio final: $" + precio +(esMonedaLocal ? "MXN : "USD"));
       
     </script>
 </head>
