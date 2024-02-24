@@ -1,0 +1,412 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+
+    <title>Horoscopo</title>
+
+    <script>
+        function consultarHor() {
+            var dia = parseInt(selectorDiaNac.value);
+            var mes = parseInt(selectorMesNac.value);
+            var valor = mes * 100 + dia;
+            var signo = "errorcito"
+
+            console.log("Consultado fecha " + dia + "/" + mes + " = " + valor);
+
+            ///////////// if para signo ////
+
+
+            // Aries 21/3 - 19/4   321-419
+            if (valor > 321 && valor <= 419){
+
+                console.log("Aries")
+                icono.src = "zodiaco/indefinido.jpg";
+
+                //<img src="zodiaco/indefinido.jpg" />
+            }
+
+            else if (valor >= 420 && valor <= 520) {
+
+                console.log("Tauro")
+                icono.src = "zodiaco/indefinido.jpg";
+
+                //<img src="zodiaco/indefinido.jpg" />
+            }
+
+            else if (valor >= 521 && valor <= 620) {
+
+                console.log("Geminis")
+                icono.src = "zodiaco/indefinido.jpg";
+
+                //<img src="zodiaco/indefinido.jpg" />
+            }
+
+            else if (valor >= 621 && valor <= 722) {
+
+                console.log("Cancer")
+                icono.src = "zodiaco/indefinido.jpg";
+
+                //<img src="zodiaco/indefinido.jpg" />
+            }
+
+            else if (valor >= 723 && valor <= 822) {
+
+                console.log("Leo")
+                icono.src = "zodiaco/indefinido.jpg";
+
+                //<img src="zodiaco/indefinido.jpg" />
+            }
+
+            else if (valor >= 823 && valor <= 922) {
+
+                console.log("Virgo")
+                icono.src = "zodiaco/indefinido.jpg";
+
+                //<img src="zodiaco/indefinido.jpg" />
+            }
+
+            else if (valor >= 923 && valor <= 1022) {
+
+                console.log("Libra")
+                icono.src = "zodiaco/indefinido.jpg";
+
+                //<img src="zodiaco/indefinido.jpg" />
+            }
+
+            else if (valor >= 1023 && valor <= 1121) {
+
+                console.log("Escorpio")
+                icono.src = "zodiaco/indefinido.jpg";
+
+                //<img src="zodiaco/indefinido.jpg" />
+            }
+
+            else if (valor >= 1122 || valor >= 119) {
+
+                console.log("Sagitario")
+                icono.src = "zodiaco/indefinido.jpg";
+
+                //<img src="zodiaco/indefinido.jpg" />
+            }
+
+            else if (valor > 1122 || valor > 119) {
+
+                console.log("Capricornio")
+                icono.src = "zodiaco/indefinido.jpg";
+
+                //<img src="zodiaco/indefinido.jpg" />
+            }
+        }
+
+
+
+        /////////////////////     Fuctions para cambiar la imagen
+
+
+
+
+
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ///////////////                           COMPATIBILIDAD
+        // Clases
+
+        var aries = {
+            vddAmor: true,
+            trabajoD: false,
+            cariño: true,
+        }
+        var tauro = {
+            vddAmor: false,
+            trabajoD: true,
+            cariño: false,
+        }
+        var geminis = {
+            vddAmor: true,
+            trabajoD: false,
+            cariño: false,
+        }
+        var cancer = {
+            vddAmor: false,
+            trabajoD: true,
+            cariño: true,
+        }
+        var leo = {
+            vddAmor: false,
+            trabajoD: false,
+            cariño: true,
+        }
+        var virgo = {
+            vddAmor: false,
+            trabajoD: true,
+            cariño: false,
+        }
+        var libra = {
+            vddAmor: false,
+            trabajoD: true,
+            cariño: true,
+        }
+        var escorpio = {
+            vddAmor: true,
+            trabajoD: false,
+            cariño: false,
+        }
+        var sagitario = {
+            vddAmor: false,
+            trabajoD: true,
+            cariño: false,
+        }
+        var capricornio = {
+            vddAmor: true,
+            trabajoD: false,
+            cariño: true,
+        }
+        var acuario = {
+            vddAmor: true,
+            trabajoD: false,
+            cariño: true,
+        }
+        var piscis = {
+            vddAmor: true,
+            trabajoD: false,
+            cariño: false,
+        }
+        //////////////////////////// function e if
+        // lector de signos
+
+
+
+        function revisarCompati() {                                                            //Recibir la ifo del selector
+            var signo1Seleccionado = document.getElementById("selectSigno1").value;
+            var signo2Seleccionado = document.getElementById("selectSigno2").value;
+
+            //////////////////////////////////////adaptarla al compatiCheck <3 
+            var signo1 = window[signo1Seleccionado];
+            var signo2 = window[signo2Seleccionado];
+
+            ///////////// PRIMER SELECTOR
+            if (signo1Seleccionado == "aries") {
+                signo1 = aries;
+            }
+            else if (signo1Seleccionado == "tauro") {
+                signo1 = tauro;
+            }
+            else if (signo1Seleccionado == "geminis") {
+                signo1 = geminis;
+            }
+            else if (signo1Seleccionado == "cancer") {
+                signo1 = cancer;
+            }
+            else if (signo1Seleccionado == "leo") {
+                signo1 = leo;
+            }
+            else if (signo1Seleccionado == "virgo") {
+                signo1 = virgo;
+            }
+            else if (signo1Seleccionado == "libra") {
+                signo1 = libra;
+            }
+            else if (signo1Seleccionado == "escorpio") {
+                signo1 = escorpio;
+            }
+            else if (signo1Seleccionado == "sagitario") {
+                signo1 = sagitario;
+            }
+            else if (signo1Seleccionado == "capricornio") {
+                signo1 = capricornio;
+            }
+            else if (signo1Seleccionado == "acuario") {
+                signo1 = acuario;
+            }
+            else if (signo1Seleccionado == "piscis") {
+                signo1 = piscis;
+            }
+            ///////////// SEGUNDO SELECTOR
+            if (signo1Seleccionado == "aries") {
+                signo1 = aries;
+            }
+            else if (signo2Seleccionado == "tauro") {
+                signo2 = tauro;
+            }
+            else if (signo2Seleccionado == "geminis") {
+                signo2 = geminis;
+            }
+            else if (signo2Seleccionado == "cancer") {
+                signo2 = cancer;
+            }
+            else if (signo2Seleccionado == "leo") {
+                signo2 = leo;
+            }
+            else if (signo2Seleccionado == "virgo") {
+                signo2 = virgo;
+            }
+            else if (signo2Seleccionado == "libra") {
+                signo2 = libra;
+            }
+            else if (signo2Seleccionado == "escorpio") {
+                signo2 = escorpio;
+            }
+            else if (signo2Seleccionado == "sagitario") {
+                signo2 = sagitario;
+            }
+            else if (signo2Seleccionado == "capricornio") {
+                signo2 = capricornio;
+            }
+            else if (signo2Seleccionado == "acuario") {
+                signo2 = acuario;
+            }
+            else if (signo2Seleccionado == "piscis") {
+                signo2 = piscis;
+            }
+
+            compatiCheck(signo1, signo2) // CompatiCheck activateeeee >:D
+
+        }
+        // compatiCheck()
+        function compatiCheck(signo1,signo2) {
+            if (signo1.vddAmor && signo2.vddAmor) {
+                console.log("vddA0mor = true");
+                mensajeVddAmor();
+            }
+            else if (signo1.trabajoD && signo2.trabajoD) {
+                console.log("trabajoD = true");
+                mensajeTrabajoD();
+            }
+            else if (signo1.cariño && signo2.cariño) {
+                console.log("cariño = true");
+                mensajeCariño();
+            }
+            else {
+                console.log("Todo = false");
+                mensajeNegativo();
+            }
+        }
+
+
+
+        //////// Mensajes
+
+        function mensajeVddAmor() {
+            alert("¡Gran compatibilidad en amor!");
+        }
+
+        function mensajeTrabajoD() {
+            alert("¡Compatibilidad en trabajo y proyectos!");
+        }
+
+        function mensajeCariño() {
+            alert("¡Mucho cariño y afecto entre ambos!");
+        }
+
+        function mensajeNegativo() {
+            alert("No hay mucha compatibilidad. ¡Pero no desesperen, siempre hay aspectos por explorar!");
+        }
+
+
+    </script>
+</head>
+<body>
+    <h1>
+        Consulta tu Horoscopo
+    </h1>
+
+    <label>Dia de Nacimiento</label>
+    <select id="selectorDiaNac">
+        <option value="1">Día 1</option>
+        <option value="2">Día 2</option>
+        <option value="3">Día 3</option>
+        <option value="4">Día 4</option>
+        <option value="5">Día 5</option>
+        <option value="6">Día 6</option>
+        <option value="7">Día 7</option>
+        <option value="8">Día 8</option>
+        <option value="9">Día 9</option>
+        <option value="10">Día 10</option>
+        <option value="11">Día 11</option>
+        <option value="12">Día 12</option>
+        <option value="13">Día 13</option>
+        <option value="14">Día 14</option>
+        <option value="15">Día 15</option>
+        <option value="16">Día 16</option>
+        <option value="17">Día 17</option>
+        <option value="18">Día 18</option>
+        <option value="19">Día 19</option>
+        <option value="20">Día 20</option>
+        <option value="21">Día 21</option>
+        <option value="22">Día 22</option>
+        <option value="23">Día 23</option>
+        <option value="24">Día 24</option>
+        <option value="25">Día 25</option>
+        <option value="26">Día 26</option>
+        <option value="27">Día 27</option>
+        <option value="28">Día 28</option>
+        <option value="29">Día 29</option>
+        <option value="30">Día 30</option>
+        <option value="31">Día 31</option>
+
+        <option value="31">Día 31</option>
+
+    </select>
+    <label>Mes de Nacimiento</label>
+    <select id="selectorMesNac">
+        <option value="1">Enero</option>
+        <option value="2">Febrero</option>
+        <option value="3">Marzo</option>
+        <option value="4">Abril</option>
+        <option value="5">Mayo</option>
+        <option value="6">Junio</option>
+        <option value="7">Julio</option>
+        <option value="8">Agosto</option>
+        <option value="9">Septiembre</option>
+        <option value="10">Octubre</option>
+        <option value="11">Noviembre</option>
+        <option value="12">Diciembre</option>
+    </select>
+
+    <button onclick="consultarHor()"> Consultar Horoscopo</button>
+
+    <img id="icono" />
+    <h2 id="nombreSigno"></h2>
+    <p id="descripcionSigno"></p>
+
+
+    <!--////////////////////////     Copatibilidad        /////////////////////////-->
+    <h1>Consulta si los signos son compatibles</h1>
+    <label>Signo1</label>
+    <select id="selectSigno1">
+        <option value="aries">Aries</option>
+        <option value="tauro">Tauro</option>
+        <option value="geminis">Géminis</option>
+        <option value="cancer">Cáncer</option>
+        <option value="leo">Leo</option>
+        <option value="virgo">Virgo</option>
+        <option value="libra">Libra</option>
+        <option value="escorpio">Escorpio</option>
+        <option value="sagitario">Sagitario</option>
+        <option value="capricornio">Capricornio</option>
+        <option value="acuario">Acuario</option>
+        <option value="piscis">Piscis</option>
+    </select>
+
+    <label>Signo2</label>
+    <select id="selectSigno2">
+        <option value="aries">Aries</option>
+        <option value="tauro">Tauro</option>
+        <option value="geminis">Géminis</option>
+        <option value="cancer">Cáncer</option>
+        <option value="leo">Leo</option>
+        <option value="virgo">Virgo</option>
+        <option value="libra">Libra</option>
+        <option value="escorpio">Escorpio</option>
+        <option value="sagitario">Sagitario</option>
+        <option value="capricornio">Capricornio</option>
+        <option value="acuario">Acuario</option>
+        <option value="piscis">Piscis</option>
+    </select>
+
+    <button onclick="revisarCompati()">Verificar Compatibilidad</button>
+
+</body>
+</html>
