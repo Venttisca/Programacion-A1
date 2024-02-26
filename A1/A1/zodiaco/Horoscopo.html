@@ -1,15 +1,15 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://localhost:51521/Horoscopo.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <meta charset="utf-8" />
+    
 
     <title>Horoscopo</title>
 
     <!--Fuentes-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Jacquarda+Bastarda+9&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./Horoscopo_files/css2" rel="stylesheet">
 
     <script>
         function consultarHor() {
@@ -420,8 +420,7 @@
 
         #tituloPrincipal {
             font-family: "Orbitron", sans-serif;
-            font-weight: 300;
-            font-size: 100pt;
+            font-weight: 500;
         }
 
         #buttonConsult, #buttonCompati {
@@ -471,120 +470,120 @@
     </style>
 </head>
 <body>
+    <h1 id="tituloPrincipal">
+        El Horóscopo Etterno
+    </h1>
+
+    <h2 id="subTitle1">¿Cual es tu signo zodiacal?</h2>
+
+    <label id="diaNac">Dia de Nacimiento</label>
+    <select id="selectorDiaNac">
+        <option value="1">Día 1</option>
+        <option value="2">Día 2</option>
+        <option value="3">Día 3</option>
+        <option value="4">Día 4</option>
+        <option value="5">Día 5</option>
+        <option value="6">Día 6</option>
+        <option value="7">Día 7</option>
+        <option value="8">Día 8</option>
+        <option value="9">Día 9</option>
+        <option value="10">Día 10</option>
+        <option value="11">Día 11</option>
+        <option value="12">Día 12</option>
+        <option value="13">Día 13</option>
+        <option value="14">Día 14</option>
+        <option value="15">Día 15</option>
+        <option value="16">Día 16</option>
+        <option value="17">Día 17</option>
+        <option value="18">Día 18</option>
+        <option value="19">Día 19</option>
+        <option value="20">Día 20</option>
+        <option value="21">Día 21</option>
+        <option value="22">Día 22</option>
+        <option value="23">Día 23</option>
+        <option value="24">Día 24</option>
+        <option value="25">Día 25</option>
+        <option value="26">Día 26</option>
+        <option value="27">Día 27</option>
+        <option value="28">Día 28</option>
+        <option value="29">Día 29</option>
+        <option value="30">Día 30</option>
+        <option value="31">Día 31</option>
+
+        <option value="31">Día 31</option>
+
+    </select>
+    <label id="mesNac">Mes de Nacimiento</label>
+    <select id="selectorMesNac">
+        <option value="1">Enero</option>
+        <option value="2">Febrero</option>
+        <option value="3">Marzo</option>
+        <option value="4">Abril</option>
+        <option value="5">Mayo</option>
+        <option value="6">Junio</option>
+        <option value="7">Julio</option>
+        <option value="8">Agosto</option>
+        <option value="9">Septiembre</option>
+        <option value="10">Octubre</option>
+        <option value="11">Noviembre</option>
+        <option value="12">Diciembre</option>
+    </select>
+    <br>
+    <button id="buttonConsult" onclick="consultarHor()"> Consultar Horoscopo</button>
+    <br>
+
+    <div class="cuadro">
+        <img id="icono" src="./Horoscopo_files/capricornio.jpg"> <br>
+        <h3 id="nombreSigno">Tu signo es capricornio!  :D</h3> <br>
+        <p id="descripcionSigno">Disciplinados y ambiciosos, los Capricornio tienen una fuerza de voluntad excepcional. Valoran la estructura y aspiran al éxito a través del trabajo duro.</p> <br>
+    </div>
+
+
+    <!--////////////////////////     Copatibilidad        /////////////////////////-->
+    <h2 id="subTitle2">Consulta si los signos son compatibles</h2>
+    <label id="secSigno1">Tu</label>
+    <select id="selectSigno1">
+        <option value="aries">Aries</option>
+        <option value="tauro">Tauro</option>
+        <option value="geminis">Géminis</option>
+        <option value="cancer">Cáncer</option>
+        <option value="leo">Leo</option>
+        <option value="virgo">Virgo</option>
+        <option value="libra">Libra</option>
+        <option value="escorpio">Escorpio</option>
+        <option value="sagitario">Sagitario</option>
+        <option value="capricornio">Capricornio</option>
+        <option value="acuario">Acuario</option>
+        <option value="piscis">Piscis</option>
+    </select>
+
+    <label id="secSigno2">Ell@</label>
+    <select id="selectSigno2">
+        <option value="aries">Aries</option>
+        <option value="tauro">Tauro</option>
+        <option value="geminis">Géminis</option>
+        <option value="cancer">Cáncer</option>
+        <option value="leo">Leo</option>
+        <option value="virgo">Virgo</option>
+        <option value="libra">Libra</option>
+        <option value="escorpio">Escorpio</option>
+        <option value="sagitario">Sagitario</option>
+        <option value="capricornio">Capricornio</option>
+        <option value="acuario">Acuario</option>
+        <option value="piscis">Piscis</option>
+    </select>
+    <br>
+    <button id="buttonCompati" onclick="revisarCompati()">Verificar Compatibilidad</button>
+    <br>
     <div class="cuadro">
 
-        <h1 id="tituloPrincipal">
-            El Horóscopo Etterno
-        </h1>
+        <h2 id="compatiTitle">¡Una persona en un millón!</h2>
+        <br>
+        <p id="compatiMsg">¡Felicidades! Las estrellas han alineado sus destinos de una manera mágica y especial.Tu conexión trasciende el tiempo y el espacio, revelando que has encontrado a la persona de tus sueños.En esta unión, cada momento compartido es un tesoro y cada mirada, un universo de posibilidades.Según los antiguos saberes del zodíaco, tu pareja es tu complemento perfecto, la pieza que faltaba en el rompecabezas de tu alma.Nutran este verdadero amor con comprensión, paciencia y, sobre todo, mucha pasión. ¡Celebren este mágico encuentro de almas gemelas!</p> <br>
 
-        <h2 id="subTitle1">¿Cual es tu signo zodiacal?</h2>
-
-        <label id="diaNac">Dia de Nacimiento</label>
-        <select id="selectorDiaNac">
-            <option value="1">Día 1</option>
-            <option value="2">Día 2</option>
-            <option value="3">Día 3</option>
-            <option value="4">Día 4</option>
-            <option value="5">Día 5</option>
-            <option value="6">Día 6</option>
-            <option value="7">Día 7</option>
-            <option value="8">Día 8</option>
-            <option value="9">Día 9</option>
-            <option value="10">Día 10</option>
-            <option value="11">Día 11</option>
-            <option value="12">Día 12</option>
-            <option value="13">Día 13</option>
-            <option value="14">Día 14</option>
-            <option value="15">Día 15</option>
-            <option value="16">Día 16</option>
-            <option value="17">Día 17</option>
-            <option value="18">Día 18</option>
-            <option value="19">Día 19</option>
-            <option value="20">Día 20</option>
-            <option value="21">Día 21</option>
-            <option value="22">Día 22</option>
-            <option value="23">Día 23</option>
-            <option value="24">Día 24</option>
-            <option value="25">Día 25</option>
-            <option value="26">Día 26</option>
-            <option value="27">Día 27</option>
-            <option value="28">Día 28</option>
-            <option value="29">Día 29</option>
-            <option value="30">Día 30</option>
-            <option value="31">Día 31</option>
-
-            <option value="31">Día 31</option>
-
-        </select>
-        <label id="mesNac">Mes de Nacimiento</label>
-        <select id="selectorMesNac">
-            <option value="1">Enero</option>
-            <option value="2">Febrero</option>
-            <option value="3">Marzo</option>
-            <option value="4">Abril</option>
-            <option value="5">Mayo</option>
-            <option value="6">Junio</option>
-            <option value="7">Julio</option>
-            <option value="8">Agosto</option>
-            <option value="9">Septiembre</option>
-            <option value="10">Octubre</option>
-            <option value="11">Noviembre</option>
-            <option value="12">Diciembre</option>
-        </select>
-        <br />
-        <button id="buttonConsult" onclick="consultarHor()"> Consultar Horoscopo</button>
-        <br />
-
-        <img id="icono" src="zodiaco/indefinido.png" /> <br />
-        <h3 id="nombreSigno"></h3> <br />
-        <p id="descripcionSigno"></p> <br />
-
-
-        <!--////////////////////////     Copatibilidad        /////////////////////////-->
-        <h2 id="subTitle2">Consulta si los signos son compatibles</h2>
-        <label id="secSigno1">Tu</label>
-        <select id="selectSigno1">
-            <option value="aries">Aries</option>
-            <option value="tauro">Tauro</option>
-            <option value="geminis">Géminis</option>
-            <option value="cancer">Cáncer</option>
-            <option value="leo">Leo</option>
-            <option value="virgo">Virgo</option>
-            <option value="libra">Libra</option>
-            <option value="escorpio">Escorpio</option>
-            <option value="sagitario">Sagitario</option>
-            <option value="capricornio">Capricornio</option>
-            <option value="acuario">Acuario</option>
-            <option value="piscis">Piscis</option>
-        </select>
-
-        <label id="secSigno2">Ell@</label>
-        <select id="selectSigno2">
-            <option value="aries">Aries</option>
-            <option value="tauro">Tauro</option>
-            <option value="geminis">Géminis</option>
-            <option value="cancer">Cáncer</option>
-            <option value="leo">Leo</option>
-            <option value="virgo">Virgo</option>
-            <option value="libra">Libra</option>
-            <option value="escorpio">Escorpio</option>
-            <option value="sagitario">Sagitario</option>
-            <option value="capricornio">Capricornio</option>
-            <option value="acuario">Acuario</option>
-            <option value="piscis">Piscis</option>
-        </select>
-        <br />
-        <button id="buttonCompati" onclick="revisarCompati()">Verificar Compatibilidad</button>
-        <br />
-
-        <h2 id="compatiTitle"></h2>
-        <br />
-        <p id="compatiMsg"></p> <br />
-
-        <img id="compatiImg" />
+        <img id="compatiImg" src="./Horoscopo_files/vddAmor.jpg">
     </div>
 
 
 
-</body>
-</html>
+</body></html>
