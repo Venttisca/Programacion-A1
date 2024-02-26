@@ -84,6 +84,23 @@
     <Content Include="Persoanje.html" />
     <Content Include="index.html" />
     <Content Include="Web.config" />
+    <Content Include="zodiaco\acuario.jpg" />
+    <Content Include="zodiaco\aries.jpg" />
+    <Content Include="zodiaco\cancer.jpg" />
+    <Content Include="zodiaco\capricornio.jpg" />
+    <Content Include="zodiaco\carinio.jpg" />
+    <Content Include="zodiaco\casoNegativo.jpg" />
+    <Content Include="zodiaco\escorpio.jpg" />
+    <Content Include="zodiaco\fondo.jpg" />
+    <Content Include="zodiaco\gemisis.jpg" />
+    <Content Include="zodiaco\leo.jpg" />
+    <Content Include="zodiaco\libra.jpg" />
+    <Content Include="zodiaco\piscis.jpg" />
+    <Content Include="zodiaco\sagitario.jpg" />
+    <Content Include="zodiaco\tauro.jpg" />
+    <Content Include="zodiaco\trabajoD.jpg" />
+    <Content Include="zodiaco\vddAmor.jpg" />
+    <Content Include="zodiaco\virgo.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -98,9 +115,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="zodiaco\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

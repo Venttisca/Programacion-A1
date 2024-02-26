@@ -6,6 +6,11 @@
 
     <title>Horoscopo</title>
 
+    <!--Fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Jacquarda+Bastarda+9&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
     <script>
         function consultarHor() {
             var dia = parseInt(selectorDiaNac.value);
@@ -16,105 +21,118 @@
             console.log("Consultado fecha " + dia + "/" + mes + " = " + valor);
 
             ///////////// if para signo ////
+
             function mostrarSigno(signo) {
                 nombreSigno.innerHTML = "Tu signo es " + signo + "!  :D"
-                icono.src = "zodiaco/" + signo +".jpg";
+                icono.src = "zodiaco/" + signo + ".jpg";
 
 
             }
 
             // Aries 21/3 - 19/4   321-419
-            if (valor > 321 && valor <= 419){
+            if (valor >= 321 && valor <= 419) {
 
                 console.log("Aries")
 
                 mostrarSigno("aries")
+                descripcionSigno.innerHTML = "Valientes y llenos de energía, los Aries son líderes naturales. Su entusiasmo y confianza los impulsan a tomar la iniciativa en cualquier situación.";
             }
 
             else if (valor >= 420 && valor <= 520) {
 
                 console.log("Tauro")
                 mostrarSigno("tauro")
+                descripcionSigno.innerHTML = "Prácticos y bien arraigados, los Tauro valoran la estabilidad y el placer sensorial. Son pacientes y confiables, con una apreciación por lo bello y lo duradero.";
 
                 //<img src="zodiaco/indefinido.jpg" />
             }
 
-            else if (valor >= 521 && valor <= 620) {
+            else if (valor >= 521 && valor <= 620) { // termina en junio
 
                 console.log("Geminis");
-                mostrarSigno("geminis")
+                mostrarSigno("geminis");
+                descripcionSigno.innerHTML = "Intelectuales y expresivos, los Géminis disfrutan de la comunicación y de los intercambios de ideas. Son adaptables y curiosos, siempre buscando aprender y experimentar cosas nuevas.";
 
                 //<img src="zodiaco/indefinido.jpg" />
             }
 
             else if (valor >= 621 && valor <= 722) {
 
-                console.log("Cancer")
-                mostrarSigno("cancer")
+                console.log("Cancer");
+                mostrarSigno("cancer");
+                descripcionSigno.innerHTML = "Emotivos y empáticos, los Cáncer son profundamente intuitivos y cuidadosos. Valorizan la familia y el hogar, y son protectores con sus seres queridos.";
 
                 //<img src="zodiaco/indefinido.jpg" />
             }
 
-            else if (valor >= 723 && valor <= 822) {
+            else if (valor >= 723 && valor <= 822) { //julio-agosto
 
-                console.log("Leo")
-                mostrarSigno("leo")
-
-                //<img src="zodiaco/indefinido.jpg" />
-            }
-
-            else if (valor >= 823 && valor <= 922) {
-
-                console.log("Virgo")
-                mostrarSigno("virgo")
+                console.log("Leo");
+                mostrarSigno("leo");
+                descripcionSigno.innerHTML = "Emotivos y empáticos, los Cáncer son profundamente intuitivos y cuidadosos. Valorizan la familia y el hogar, y son protectores con sus seres queridos.";
 
                 //<img src="zodiaco/indefinido.jpg" />
             }
 
-            else if (valor >= 923 && valor <= 1022) {
+            else if (valor >= 823 && valor <= 922) {//agosto-sept
 
-                console.log("Libra")
-                mostrarSigno("libra")
-
-                //<img src="zodiaco/indefinido.jpg" />
-            }
-
-            else if (valor >= 1023 && valor <= 1121) {
-
-                console.log("Escorpio")
-                mostrarSigno("escorpio")
+                console.log("Virgo");
+                mostrarSigno("virgo");
+                descripcionSigno.innerHTML = "Meticulosos y diligentes, los Virgo tienen un enfoque práctico hacia la vida. Son analíticos y precisos, buscando siempre mejorar y servir.";
 
                 //<img src="zodiaco/indefinido.jpg" />
             }
 
-            else if (valor >= 1122 || valor >= 119) {
+            else if (valor >= 923 && valor <= 1022) {//sept-octubre
 
-                console.log("Sagitario")
-                mostrarSigno("sagitario")
-
-                //<img src="zodiaco/indefinido.jpg" />
-            }
-
-            else if (valor >= 1122 || valor >= 119) {
-
-                console.log("Capricornio")
-                mostrarSigno("capricornio")
+                console.log("Libra");
+                mostrarSigno("libra");
+                descripcionSigno.innerHTML = "Amantes de la armonía y la justicia, los Libra buscan el equilibrio en todas las áreas de su vida. Son diplomáticos y sociables, con un fino sentido estético.";
 
                 //<img src="zodiaco/indefinido.jpg" />
             }
 
-            else if (valor >= 1122 || valor >= 119) {
+            else if (valor >= 1023 && valor <= 1121) {//octb-nov
 
-                console.log("Acuario")
-                mostrarSigno("acuario")
+                console.log("Escorpio");
+                mostrarSigno("escorpio");
+                descripcionSigno.innerHTML = "Intensos y apasionados, los Escorpio son profundos y misteriosos. Su tenacidad y voluntad los hacen excelentes aliados y temibles adversarios.";
 
                 //<img src="zodiaco/indefinido.jpg" />
             }
 
-            else if (valor >= 1122 || valor >= 119) {
+            else if (valor >= 1122 && valor <= 1221) {//nov-dic
 
-                console.log("Piscis")
-                mostrarSigno("piscis")
+                console.log("Sagitario");
+                mostrarSigno("sagitario");
+                descripcionSigno.innerHTML = "Optimistas y amantes de la libertad, los Sagitario tienen un espíritu aventurero. Buscan la verdad y el significado, siempre con una visión positiva.";
+
+                //<img src="zodiaco/indefinido.jpg" />
+            }
+
+            else if ((valor >= 1222 && valor <= 1231) || (valor >= 101 && valor <= 119)) {// OR  dic-enero
+
+                console.log("Capricornio");
+                mostrarSigno("capricornio");
+                descripcionSigno.innerHTML = "Disciplinados y ambiciosos, los Capricornio tienen una fuerza de voluntad excepcional. Valoran la estructura y aspiran al éxito a través del trabajo duro.";
+
+                //<img src="zodiaco/indefinido.jpg" />
+            }
+
+            else if (valor >= 120 && valor <= 218) {//enro-febrero
+
+                console.log("Acuario");
+                mostrarSigno("acuario");
+                descripcionSigno.innerHTML = "Innovadores y visionarios, los Acuario son independientes y originales. Valoran la amistad y la libertad, buscando siempre hacer del mundo un lugar mejor.";
+
+                //<img src="zodiaco/indefinido.jpg" />
+            }
+
+            else if (valor >= 219 && valor <= 320) {//febrero-marzo
+
+                console.log("Piscis");
+                mostrarSigno("piscis");
+                descripcionSigno.innerHTML = "Sensibles y compasivos, los Piscis son creativos y profundamente emocionales. Tienen una gran intuición y a menudo se sienten conectados con el mundo espiritual.";
 
                 //<img src="zodiaco/indefinido.jpg" />
             }
@@ -202,7 +220,7 @@
             var signo1Seleccionado = document.getElementById("selectSigno1").value;
             var signo2Seleccionado = document.getElementById("selectSigno2").value;
 
-            //////////////////////////////////////adaptarla al compatiCheck <3 
+            //////////////////////////////////////adaptarla al compatiCheck <3
             var signo1 = window[signo1Seleccionado];
             var signo2 = window[signo2Seleccionado];
 
@@ -244,8 +262,8 @@
                 signo1 = piscis;
             }
             ///////////// SEGUNDO SELECTOR
-            if (signo1Seleccionado == "aries") {
-                signo1 = aries;
+            if (signo2Seleccionado == "aries") {
+                signo2 = aries;
             }
             else if (signo2Seleccionado == "tauro") {
                 signo2 = tauro;
@@ -285,7 +303,7 @@
 
         }
         // compatiCheck()
-        function compatiCheck(signo1,signo2) {
+        function compatiCheck(signo1, signo2) {
             if (signo1.vddAmor && signo2.vddAmor) {
                 console.log("vddA0mor = true");
                 mensajeVddAmor();
@@ -342,21 +360,106 @@
     </script>
     <!--AQUI EMPIEZA EL STYLE           AJUSTE DE TAMAÑOS ETC-->
     <style>
-        #icono {
-            width: 750px;
+        #fondito {
+            
+            background-image: url("zodiaco/fondo.jpg");
+            position: relative;
+            /*arreglando el fondo*/
+            background-size: contain;
+
         }
+
+
+
+        html, body {
+            height: 100%; /* Asegura que el body ocupe toda la altura de la ventana */
+            align-items: center; /* Centra verticalmente */
+            text-align: center; /* Asegura que el texto dentro del contenedor también esté centrado */
+        }
+
+        #icono {
+            height: 600px;
+        }
+
         #compatiImg {
-            height:600px;
+            height: 600px;
+        }
+
+
+
+        .orbitron-orbit {
+            font-family: "Orbitron", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .caveat-normal {
+            font-family: "Caveat", cursive;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+        }
+        .jacquarda-bastarda9-regular {
+            font-family: "Jacquarda Bastarda 9", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+
+        #subTitle1, #subTitle2,#diaNac, #mesNac, #secSigno1, #secSigno2, #selectorDiaNac, #selectorMesNac, #selectSigno1, #selectSigno2 {
+            font-family: "Caveat", cursive;
+            font-weight: 400;
+        }
+
+        #tituloPrincipal {
+            font-family: "Orbitron", sans-serif;
+            font-weight: 500;
+        }
+
+        #buttonConsult,#buttonCompati {
+            font-family: "Jacquarda Bastarda 9", serif;
+        }
+
+
+        body {
+            background-color: #110d0a; /* Esto cambia el color de fondo de la página */
+            color: #effdff; /* Esto cambia el color del texto */
+            background-image: url("zodiaco/fondo.jpg");
+            position: relative;
+            /*arreglando el fondo*/
+            background-size:cover;
+        }
+
+        h1, h2, h3 {
+            color: #effdff;
+        }
+        p {
+            padding-left:300px;
+            padding-right:300px;
+        }
+
+        #buttonCompati, #buttonConsult {
+            background-color: #042433;
+            color: #effdff;
+            padding: 10px;
+        }
+
+        #selectorDiaNac, #selectorMesNac, #selectSigno1, #selectSigno2 {
+            background-color: #042433;
+            color: #effdff;
         }
 
     </style>
 </head>
 <body>
-    <h1>
-        Consulta tu Horoscopo
+    <h1 id="tituloPrincipal">
+        El Horóscopo Etterno
     </h1>
 
-    <label>Dia de Nacimiento</label>
+    <h2 id="subTitle1">¿Cual es tu signo zodiacal?</h2>
+
+    <label id="diaNac">Dia de Nacimiento</label>
     <select id="selectorDiaNac">
         <option value="1">Día 1</option>
         <option value="2">Día 2</option>
@@ -393,7 +496,7 @@
         <option value="31">Día 31</option>
 
     </select>
-    <label>Mes de Nacimiento</label>
+    <label id="mesNac">Mes de Nacimiento</label>
     <select id="selectorMesNac">
         <option value="1">Enero</option>
         <option value="2">Febrero</option>
@@ -408,18 +511,18 @@
         <option value="11">Noviembre</option>
         <option value="12">Diciembre</option>
     </select>
-
-    <button onclick="consultarHor()"> Consultar Horoscopo</button>
+    <br />
+    <button id="buttonConsult" onclick="consultarHor()"> Consultar Horoscopo</button>
     <br />
 
-    <img id="icono" /> <br />
-    <h2 id="nombreSigno"></h2> <br />
+    <img id="icono" src="zodiaco/indefinido.png" /> <br />
+    <h3 id="nombreSigno"></h3> <br />
     <p id="descripcionSigno"></p> <br />
 
 
     <!--////////////////////////     Copatibilidad        /////////////////////////-->
-    <h1>Consulta si los signos son compatibles</h1>
-    <label>Signo1</label>
+    <h2 id="subTitle2">Consulta si los signos son compatibles</h2>
+    <label id="secSigno1">Signo1</label>
     <select id="selectSigno1">
         <option value="aries">Aries</option>
         <option value="tauro">Tauro</option>
@@ -435,7 +538,7 @@
         <option value="piscis">Piscis</option>
     </select>
 
-    <label>Signo2</label>
+    <label id="secSigno2">Signo2</label>
     <select id="selectSigno2">
         <option value="aries">Aries</option>
         <option value="tauro">Tauro</option>
@@ -451,12 +554,14 @@
         <option value="piscis">Piscis</option>
     </select>
 
-    <button onclick="revisarCompati()">Verificar Compatibilidad</button>
+    <button id="buttonCompati" onclick="revisarCompati()">Verificar Compatibilidad</button>
     <br />
-    <img id="compatiImg" />
-    <br />
+
     <h2 id="compatiTitle"></h2>
     <br />
-    <p id="compatiMsg"></p>
+    <p id="compatiMsg"></p> <br />
+
+    <img id="compatiImg" />
+
 </body>
 </html>
