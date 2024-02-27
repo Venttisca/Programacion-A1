@@ -1,0 +1,56 @@
+﻿﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>IMC con for</title>
+    <script>
+        var IMC;
+        var altura = 1.40;
+        var peso;
+        var status;
+
+
+        function estatus(IMC) {
+            if (IMC < 18.5) {
+                status = "Bajo Peso"
+            }
+            else if (IMC >= 18.5 && IMC <= 24.9) {
+                status = "Normal"
+            }
+            else if (IMC >= 25 && IMC <=29.9) {
+                status = "Sobrepeso"
+            }
+            else if (IMC >= 30 && IMC <=34.9) {
+                status = "Obesidad I"
+            }
+            else if (IMC >= 35 && IMC <=39.9) {
+                status = "Obesidad II"
+            }
+            else if (IMC >= 40 && IMC <=49.9) {
+                status = "Obesidad III";
+            }
+            else if (IMC > 50) {
+                status = "Obesidad IV"
+            }
+        }
+                //IMC altura fija, ciclo desde 10kilos hasta 200 kilos, imprimir para al tura tal peso tal el IMC es, y su categoria es
+
+        for (peso = 10; peso <= 100; peso += 10) {
+            IMC = peso / (altura * altura);
+
+            estatus(IMC);
+            console.log("El IMC para una persona que mide " + altura + "metros de alto y pesa " + peso +
+                " kilos, es de " + IMC + " lo que situa su estado como: " + status)
+        }
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
