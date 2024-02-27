@@ -1,0 +1,63 @@
+﻿﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Ejercicio de ciclo for</title>
+
+    <script>
+        ////////Este es el principio del ciclo for
+        for (i = 0; i < 10; i++) { /// for (declarar o estado de inicio; condición de repetición; ejecución) //seguirá comprobando hasta que sea negativo
+            console.log("El valor de i es: " + i);      //ejecución de cada iteración, incluida la primera
+        }
+        console.log("Esto se ejecutará hasta terminar el for anterior");
+
+        //con operador inclusivo "<="
+        for (i = 0; i <= 10; i++) { /// for (declarar o estado de inicio; condición de repetición; ejecución) //seguirá comprobando hasta que sea negativo
+            console.log("El valor de i en el ciclo inclusivo es: " + i);      //ejecución de cada iteración, incluida la primera
+        }
+        console.log("Esto se ejecutará hasta terminar el for anterior");
+
+
+        console.log("De 2 en 2:");
+        for (i = 0; i <= 10; i+= 2) { /// for (declarar o estado de inicio; condición de repetición; ejecución) //seguirá comprobando hasta que sea negativo
+            console.log("El valor de i es: " + i);      //ejecución de cada iteración, incluida la primera
+        }
+        console.log("Esto se ejecutará hasta terminar el for anterior");
+
+
+
+        console.log("Restando");
+        for (i = 10; i > 0; i--) {
+            console.log("El valor de i es: " + i);
+        }
+        console.log("Esto se ejecutará hasta terminar el for anterior");
+
+        console.log("nNgativo");
+        for (i = 5; i > -3; i--) {
+            console.log("El valor de i es: " + i);
+        }
+        console.log("Esto se ejecutará hasta terminar el for anterior");
+
+        /*           comentario de bloqueeeee!! :D
+        console.log("nNgativo q no funciona");
+        for (i = 10; i > 0; i++) {
+            console.log("El valor de i es: " + i);
+        }
+        console.log("Esto se ejecutará hasta terminar el for anterior");
+        */
+        console.log("Cálculo de area");
+        for (let radio = 0; radio < 5; radio++) {
+            var area = Math.PI * radio * radio;
+            console.log("el area es: " + area);
+        }
+        console.log("Esto se ejecutará hasta terminar el for anterior");
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
