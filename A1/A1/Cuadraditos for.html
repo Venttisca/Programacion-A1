@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Cuadraditos for</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var elementoScript0 = document.getElementById("script0")
+            if (elementoScript0) {
+                let contenidoScript = elementoScript0.textContent
+                let preElemento = document.getElementById("pre0")
+                if (preElemento) {
+                    preElemento.textContent = contenidoScript
+                }
+            }
+
+        })
+    </script>
+
+    <style>
+        body {
+            color: #fff;
+            background-color: #110025;
+        }
+        .cuadro {
+            height: 50px;
+            width: 50px;
+            background-color: aquamarine;
+            box-shadow: 1px 1px 3px black;
+            margin: 5px;
+        }
+    </style>
+    <script id="script0" type="text/javascript">
+        function generarCuadros() {
+            var cantidad = parseInt(document.getElementById("campoCantidad").value);
+            var tamInicial = parseInt(document.getElementById("campoTamInit").value);
+            var factCre = parseInt(document.getElementById("campoFactCre").value);
+
+            console.log("Generando " + cantidad + " cuadros con tam inicial " + tamInicial + " y factor " + factCre);
+
+            for (var i = 1; i <= cantidad; i++) {
+                var cuadroNuevo = document.createElement("div");
+                cuadroNuevo.className = "cuadro";
+
+                var ancho = tamInicial + (tamInicial * (i - 1) * factCre);
+                var alto = ancho;
+
+                cuadroNuevo.style =
+                    "width: " + ancho + "px;" +
+                    "height: " + alto + "px;";
+
+
+
+                document.body.appendChild(cuadroNuevo);
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <h1>Código</h1>
+    <pre id="pre0"></pre>
+    <h1>Generador de cuadros</h1>
+    <label> cantidad a generar</label>
+    <input type="number" id="campoCantidad" /><br />
+
+    <label> tamaño incial</label>
+    <input type="number" id="campoTamInit" /><br />
+
+    <label> factor de crecimiento</label>
+    <input type="number" id="campoFactCre" step="any" /><br />
+
+    <button onclick="generarCuadros()">Generar :D</button>
+</body>
+</html>
