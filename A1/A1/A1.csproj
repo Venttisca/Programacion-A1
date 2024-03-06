@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Arreglos.html" />
     <Content Include="Ciclo for.html" />
     <Content Include="Cuenta de banco.html" />
     <Content Include="Estructuras.html" />

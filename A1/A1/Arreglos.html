@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Arreglos </title>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            /*Esto hace que se termine de cargar el DOM
+            otra forma de resolverlo sería colocar los scripts al final del body ya que citamos cosas
+            antes de q aparescan*/
+
+            let scriptElemento = document.getElementById("scriptEjercicio");
+
+            if (scriptElemento) {
+                let scriptContenido = scriptElemento.textContent;
+
+                let preElemento = document.getElementById("scriptEjercicioTxt");
+                if (preElemento) {
+                    preElemento.textContent = scriptContenido;
+                }
+            }
+
+            let scriptElemento2 = document.getElementById("scriptEjercicio2");
+            if (scriptElemento2) {
+                let scriptContenido = scriptElemento2.textContent;
+                let preElemento = document.getElementById("scriptEjercicioTxt2");
+
+                if (preElemento) {
+                    preElemento.textContent = scriptContenido;
+                }
+            }
+
+            let scriptElemento0 = document.getElementById("scriptTeoria");
+            if (scriptElemento0) {
+                let scriptContenido = scriptElemento0.textContent;
+                let preElemento = document.getElementById("scriptTeoriaTxt")
+
+                if (preElemento) {
+                    preElemento.textContent = scriptContenido
+                }
+            }
+        })   //IMPORTANTE: cerrar el ) de "document.addEventListener(" del principio
+    </script>
+
+    <script id="scriptTeoria" type="text/javascript">
+
+
+        var frutas = ["pera", "manzana", "piña"];
+        //              0        1          2
+
+        //una vez declarados no pueden cambiar de tamaño
+
+        console.log(frutas[1]); //manzana
+
+        frutas.push("banana");//añade uno o mas elementos al final ("banana" con indice 3)
+
+        frutas.pop()// Elimina el último elemento y lo devuelve
+
+        frutas.shift()// Elimina el primer elemento y lo devuelve
+
+        frutas.unshift("fresa");// Añade uno o más elemtos al principio de del arreglo
+
+        frutas.indexOf("manzana");//Devuelve la posicion del elemento si no lo encuentra da "-1"
+
+        //frutas.remove("pera"); //elimina pera de la lista
+
+        frutas.splice(1);//partir un arreglo
+
+        frutas.slice();//
+
+
+
+    </script>
+
+
+    <script id="scriptEjercicio" type="text/javascript">
+
+        //DECLARAR
+        var calificaciones = [8, 7, 9, 10, 5, 6, 9]
+
+        console.log("La cantidad de elementos en tu lista: " + calificaciones.length);
+
+        console.log("el primer elemento es: " + calificaciones[0]);
+
+        //ACCEDER
+
+        var ultimaCalifi = calificaciones[calificaciones.length - 1]; // -1 pq si son 10 elementos se cuenta del 0 al 9 para dar nueve pone el -1
+
+        console.log("el último elemento es: " + ultimaCalifi)
+
+        //MODIFICAR
+
+        calificaciones[4] = 10;
+        calificaciones[2] = 3 + 5;
+        calificaciones[1] = calificaciones[3];
+
+        var miCalif = 7;
+        calificaciones[4] = miCalif;
+
+        //por function
+        function calcularCalif() {
+            let califi = 3 + 7;
+            return califi;
+        }
+
+        console.log(calificaciones);//Muesta el contenido de toda la lista
+
+        //    Como recorrer un arreglo usando un ciclo for
+        for (let i = 0; i < calificaciones.length; i++) {
+            console.log("this: " + calificaciones[i]);  //consolea cada uno de los elementos en orden
+        }
+
+
+        function calcPromedio(arr) {
+            var suma = 0;
+            for (let i = 0; i < calificaciones.length; i++) {
+                suma += arr[i];
+            }
+            let promedio = suma / arr.length;
+
+            return promedio;
+
+        }
+
+        var promCalifi = calcPromedio(calificaciones);
+        console.log("El promedio de nuestras calidicaciones es: " + promCalifi);
+        var alturas = [1.70, 1.60, 1.58, 1.82, 1.73];
+        console.log("El promedio de las alturas es: " + calcPromedio(alturas));
+
+        console.log("Promedio de costos: " + calcPromedio([20.33, 50.69, 120.3, 15.6]));// la forma más corta de hacer el promedio
+
+    </script>
+    <script id="scriptEjercicio2" type="text/javascript">
+        var numerosAzar = [1, 9, 6, 4, 3, 8, 6, 15, 23, 49, 2, 7, 1];
+
+        console.log("Cadena: ");
+        console.log(numerosAzar);
+
+        function numerosPares(arreglo) {
+            console.log("Números Pares: ")
+            let contador = "";
+            for (let i = 0; i < arreglo.length; i++) {
+                if (arreglo[i] % 2 === 0) {
+                    contador += arreglo[i].toString() + ", ";
+                }
+            }
+            console.log(contador);
+        }
+
+        function indicesPares(arreglo) {
+            console.log("Indices Pares: ")
+            let contador = "";
+            for (let i = 0; i < arreglo.length; i++) {
+                if (i % 2 === 0) {
+                    contador += arreglo[i].toString() + ", ";
+                }
+            }
+            console.log(contador);
+        }
+
+        indicesPares(numerosAzar);
+        numerosPares(numerosAzar);
+    </script>
+</head>
+<body>
+    <style>        
+        body {
+            background-color: #110025;
+            color: #ffff;
+        }
+    </style>
+    <h1>Ejercicio de arreglos</h1>
+    <h2>Teoría</h2>
+    <h3>
+        Los arreglos o listas, un tipo de colección
+    </h3>
+    <pre id="scriptTeoriaTxt"> </pre>
+
+    <h2>Primer Ejercicio</h2>
+    <pre id="scriptEjercicioTxt"></pre>
+    <br />
+    <br />
+    <h2>Segundo Ejercicio</h2>
+    <pre id="scriptEjercicioTxt2"></pre>
+
+</body>
+</html>
