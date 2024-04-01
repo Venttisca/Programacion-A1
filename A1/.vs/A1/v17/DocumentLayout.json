@@ -1,0 +1,165 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Lenovo\\Desktop\\GitHub\\Programacion-A1\\A1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{453039AA-E14C-4096-92B8-3D45AD883F34}|A1\\A1.csproj|c:\\users\\lenovo\\desktop\\github\\programacion-a1\\a1\\a1\\cuadraditos for.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{453039AA-E14C-4096-92B8-3D45AD883F34}|A1\\A1.csproj|solutionrelative:a1\\cuadraditos for.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{453039AA-E14C-4096-92B8-3D45AD883F34}|A1\\A1.csproj|C:\\Users\\Lenovo\\Desktop\\GitHub\\Programacion-A1\\A1\\a1\\arreglos.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{453039AA-E14C-4096-92B8-3D45AD883F34}|A1\\A1.csproj|solutionrelative:a1\\arreglos.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{453039AA-E14C-4096-92B8-3D45AD883F34}|A1\\A1.csproj|C:\\Users\\Lenovo\\Desktop\\GitHub\\Programacion-A1\\A1\\a1\\ciclo for.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{453039AA-E14C-4096-92B8-3D45AD883F34}|A1\\A1.csproj|solutionrelative:a1\\ciclo for.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{453039AA-E14C-4096-92B8-3D45AD883F34}|A1\\A1.csproj|C:\\Users\\Lenovo\\Desktop\\GitHub\\Programacion-A1\\A1\\a1\\horoscopo.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{453039AA-E14C-4096-92B8-3D45AD883F34}|A1\\A1.csproj|solutionrelative:a1\\horoscopo.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{453039AA-E14C-4096-92B8-3D45AD883F34}|A1\\A1.csproj|C:\\Users\\Lenovo\\Desktop\\GitHub\\Programacion-A1\\A1\\a1\\imc con for.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{453039AA-E14C-4096-92B8-3D45AD883F34}|A1\\A1.csproj|solutionrelative:a1\\imc con for.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{453039AA-E14C-4096-92B8-3D45AD883F34}|A1\\A1.csproj|C:\\Users\\Lenovo\\Desktop\\GitHub\\Programacion-A1\\A1\\a1\\tablas de multiplicar.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{453039AA-E14C-4096-92B8-3D45AD883F34}|A1\\A1.csproj|solutionrelative:a1\\tablas de multiplicar.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{453039AA-E14C-4096-92B8-3D45AD883F34}|A1\\A1.csproj|C:\\Users\\Lenovo\\Desktop\\GitHub\\Programacion-A1\\A1\\a1\\cuenta de banco.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{453039AA-E14C-4096-92B8-3D45AD883F34}|A1\\A1.csproj|solutionrelative:a1\\cuenta de banco.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{453039AA-E14C-4096-92B8-3D45AD883F34}|A1\\A1.csproj|C:\\Users\\Lenovo\\Desktop\\GitHub\\Programacion-A1\\A1\\a1\\pelea.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{453039AA-E14C-4096-92B8-3D45AD883F34}|A1\\A1.csproj|solutionrelative:a1\\pelea.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{453039AA-E14C-4096-92B8-3D45AD883F34}|A1\\A1.csproj|C:\\Users\\Lenovo\\Desktop\\GitHub\\Programacion-A1\\A1\\a1\\estructuras parte 2.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{453039AA-E14C-4096-92B8-3D45AD883F34}|A1\\A1.csproj|solutionrelative:a1\\estructuras parte 2.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Cuadraditos for.html",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\GitHub\\Programacion-A1\\A1\\A1\\Cuadraditos for.html",
+              "RelativeDocumentMoniker": "A1\\Cuadraditos for.html",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\GitHub\\Programacion-A1\\A1\\A1\\Cuadraditos for.html*",
+              "RelativeToolTip": "A1\\Cuadraditos for.html*",
+              "ViewState": "AQIAABUAAAAAAAAAAAAhwCoAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-03-18T04:32:54.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Arreglos.html",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\GitHub\\Programacion-A1\\A1\\A1\\Arreglos.html",
+              "RelativeDocumentMoniker": "A1\\Arreglos.html",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\GitHub\\Programacion-A1\\A1\\A1\\Arreglos.html",
+              "RelativeToolTip": "A1\\Arreglos.html",
+              "ViewState": "AQIAAJkAAAAAAAAAAAAAAKIAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-03-18T04:32:55.683Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "tablas de multiplicar.html",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\GitHub\\Programacion-A1\\A1\\A1\\tablas de multiplicar.html",
+              "RelativeDocumentMoniker": "A1\\tablas de multiplicar.html",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\GitHub\\Programacion-A1\\A1\\A1\\tablas de multiplicar.html",
+              "RelativeToolTip": "A1\\tablas de multiplicar.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-03-18T04:32:55.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Ciclo for.html",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\GitHub\\Programacion-A1\\A1\\A1\\Ciclo for.html",
+              "RelativeDocumentMoniker": "A1\\Ciclo for.html",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\GitHub\\Programacion-A1\\A1\\A1\\Ciclo for.html",
+              "RelativeToolTip": "A1\\Ciclo for.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD4AAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-03-18T04:32:55.696Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IMC con for.html",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\GitHub\\Programacion-A1\\A1\\A1\\IMC con for.html",
+              "RelativeDocumentMoniker": "A1\\IMC con for.html",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\GitHub\\Programacion-A1\\A1\\A1\\IMC con for.html",
+              "RelativeToolTip": "A1\\IMC con for.html",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAC4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-03-18T04:32:55.698Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Horoscopo.html",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\GitHub\\Programacion-A1\\A1\\A1\\Horoscopo.html",
+              "RelativeDocumentMoniker": "A1\\Horoscopo.html",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\GitHub\\Programacion-A1\\A1\\A1\\Horoscopo.html",
+              "RelativeToolTip": "A1\\Horoscopo.html",
+              "ViewState": "AQIAAKcBAAAAAAAAAAAAAKYAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-03-18T04:32:55.7Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Estructuras parte 2.html",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\GitHub\\Programacion-A1\\A1\\A1\\Estructuras parte 2.html",
+              "RelativeDocumentMoniker": "A1\\Estructuras parte 2.html",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\GitHub\\Programacion-A1\\A1\\A1\\Estructuras parte 2.html",
+              "RelativeToolTip": "A1\\Estructuras parte 2.html",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAAAF4AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-03-18T04:32:55.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Cuenta de banco.html",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\GitHub\\Programacion-A1\\A1\\A1\\Cuenta de banco.html",
+              "RelativeDocumentMoniker": "A1\\Cuenta de banco.html",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\GitHub\\Programacion-A1\\A1\\A1\\Cuenta de banco.html",
+              "RelativeToolTip": "A1\\Cuenta de banco.html",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAAAE0AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-03-18T04:32:55.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Pelea.html",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\GitHub\\Programacion-A1\\A1\\A1\\Pelea.html",
+              "RelativeDocumentMoniker": "A1\\Pelea.html",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\GitHub\\Programacion-A1\\A1\\A1\\Pelea.html",
+              "RelativeToolTip": "A1\\Pelea.html",
+              "ViewState": "AQIAAN4AAAAAAAAAAAAAAO0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-03-18T04:32:55.703Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
