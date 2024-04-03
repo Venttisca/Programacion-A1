@@ -3,12 +3,31 @@
 <head>
     <meta charset="utf-8" />
     <title>Chat</title>
+    <!--Fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
     <script>
-        var colorBanzai = document.getElementsByClassName(".colorBanzai");
-        var colorEd = "#FF9800";
-        var colorShenzi = "#9C27B0";
-        var colorScar = "#F44336";
-        var colorConjunto ="#757575"
+        document.addEventListener("DOMContentLoaded", function () {
+            const script = document.getElementById("script");
+            if (script) {
+                let scriptContent = script.textContent;
+
+                let scriptText = document.getElementById("scriptText");
+                if (scriptText) {
+                    scriptText.textContent = scriptContent;
+                }
+            }
+        }
+        )
+    </script>
+    <script id="script" type="text/javascript">
+        var colorBanzai = "#689F38";
+        var colorEd = "#FBC02D";
+        var colorShenzi = "#9575CD";
+        var colorScar = "#D32F2F";
+        var colorConjunto = "#9E9E9E"
 
         var dialogo = [ //autocompletado con IA pq es un chingo
             {
@@ -67,8 +86,8 @@
                 texto: "Y además son tan..."
             },
             {
-                personaje: "Los dos",
-                color: colorConjunto, // Un color neutral para cuando hablen ambos
+                personaje: "Los dos",      // Dialogo de 2 personajes, tener cuidado al usar
+                color: colorConjunto,
                 texto: "Feos (los dos se matan de la risa, cuando son interrumpidas por Scar)"
             },
             {
@@ -171,26 +190,66 @@
                 alert("Se ha alcanzado el final de los diálogos");
                 return;
             }
-            if (indiceDialogo > 4) {
+            if (indiceDialogo > 3) {
                 let toDestroy = document.getElementById("item" + crecimiento);
-                toDestroy.remove();
-                crecimiento++
-                console.log("crecimiento: " + crecimiento);
-                
+                if (toDestroy) {
+                    toDestroy.remove();
+                    crecimiento++
+                    console.log("crecimiento: " + crecimiento);
+                }
+
             }
 
+
             let contenedor = document.getElementById("contenedorDialogo");
+
             let item1 = document.createElement("div");
+            item1.setAttribute("id", "item" + indiceDialogo);
+            item1.classList.add("itemDialogo");
+
             let eCharacter = entrada[indiceDialogo].personaje + ":";
             let eText = entrada[indiceDialogo].texto;
+
             let eColor = entrada[indiceDialogo].color;
+            item1.style.backgroundColor = eColor;
+
+            /*(ya no se usa, fue remplazado, pero es interesante saberlo)
+
+            item1.classList.add(eColor.replace(/\s+/g, ""));
+
+            /*Revisar, esto elimina el espacio para el caso de "Los Dos"*/
+
+            let label = document.createElement("label");
+            label.classList.add("press-start-2p-regular");
+            label.style.fontSize = "14px";
+            label.textContent = eCharacter;
+            item1.appendChild(label);
+
+            let parragraph = document.createElement("p");
+            parragraph.textContent = eText;
+            item1.appendChild(parragraph);
+
             console.log("length: " + entrada.length);
 
-            item1.innerHTML = "<div id='item" + indiceDialogo + "' class=" + eColor + " class='itemDialogo'><label>" + eCharacter + "</label><p>" + eText + "</p></div>";
-            console.log(eColor);
+
             contenedor.appendChild(item1);
+
+           
+
             indiceDialogo++
             console.log(indiceDialogo);
+
+            //   NOTAS     appendChild
+
+            /*
+            El appendChild tiene esta estructura:
+
+            padre.appendChild(hijo);
+
+            La lectura sería: Al padre se le asigna el hijo
+
+            el hijo no lleva comillas
+            */
 
         }
 
@@ -198,59 +257,70 @@
     </script>
     <style>
         .itemDialogo {
-            background-color: aquamarine;
+            background-color: red;
             margin-left: 25px;
             margin-right: 25px;
-            
-          
+            border-style: solid;
+            border-width: 5px;
+            border-color: #455A64;
+            margin-block-end: 8px;
         }
-        .colorBanzai {
-            background-color: #4CAF50;
-        }
-        .colorEd {
-            background-color: #FF9800;
-        }
-        .colorShenzi {
-            background-color: #9C27B0;
-        }
-        .colorScar {
-            background-color: #F44336;
-        }
-        .colorConjunto {
-            background-color: #757575;
-        }
+
 
         .contenedorDialogoStyle {
-            background-color: blueviolet;
+            background-color: #263238;
             position: center;
             justify-content: center;
-            height: 450px;
+            height: 500px;
             width: 450px;
+            border-style: solid;
+            border-width: 5px;
+            border-color: #455A64;
         }
-        .bonton{
-            background-color:brown;
-        }
-        .tono1{
-            background-color:antiquewhite;
-            
-        }
-        .nombre{}
 
-        .texto{}
+        .bonton {
+            background-color: #29B6F6;
+            color: #E0E0E0;
+        }
 
+        .tono1 {
+            background-color: antiquewhite;
+        }
+
+        .nombre {
+        }
         body {
             background-color: #110025;
-            color: #ffff;
+            color: #E0E0E0;
+        }      
+
+        .prompt-regular {
+            font-family: "Prompt", sans-serif;
+            font-weight: 400;
+            font-style: normal;
         }
+        .press-start-2p-regular {
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .subTittle{
+            font-size:24px;
+        }
+
     </style>
 </head>
 
-<body>
+<body class="prompt-regular">
+    <h1 class="press-start-2p-regular">Chat de appendChild</h1><br />
+    <h2 class="press-start-2p-regular subTittle">Ejecución</h2><br />
     <div id="contenedorDialogo" class="contenedorDialogoStyle">
         <br />
   
     </div>
     <button onclick="leerSiguiente(dialogo)" class="bonton">Continuar</button>
+    <h2 class="press-start-2p-regular subTittle">Código</h2><br />
+    <pre id="scriptText" class="scriptTextClass"></pre><br />
 
 </body>
 </html>
