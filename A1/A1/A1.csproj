@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Arreglos.html" />
+    <Content Include="Chat.html" />
     <Content Include="Ciclo for.html" />
     <Content Include="Cuadraditos for.html" />
     <Content Include="Cuenta de banco.html" />
