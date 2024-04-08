@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\Lenovo\\Desktop\\GitHub\\Programacion-A1\\A1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{453039AA-E14C-4096-92B8-3D45AD883F34}|A1\\A1.csproj|C:\\Users\\Lenovo\\Desktop\\GitHub\\Programacion-A1\\A1\\a1\\chat.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{453039AA-E14C-4096-92B8-3D45AD883F34}|A1\\A1.csproj|c:\\users\\lenovo\\desktop\\github\\programacion-a1\\a1\\a1\\chat.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{453039AA-E14C-4096-92B8-3D45AD883F34}|A1\\A1.csproj|solutionrelative:a1\\chat.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -44,9 +44,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{453039AA-E14C-4096-92B8-3D45AD883F34}|A1\\A1.csproj|C:\\Users\\Lenovo\\Desktop\\GitHub\\Programacion-A1\\A1\\a1\\cuenta de banco.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{453039AA-E14C-4096-92B8-3D45AD883F34}|A1\\A1.csproj|solutionrelative:a1\\cuenta de banco.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{453039AA-E14C-4096-92B8-3D45AD883F34}|A1\\A1.csproj|c:\\users\\lenovo\\desktop\\github\\programacion-a1\\a1\\a1\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|909d16b3-c8e8-43d1-a2b8-26ea0d4b6b57"
     }
   ],
   "DocumentGroupContainers": [
@@ -71,8 +68,7 @@
               "ToolTip": "C:\\Users\\Lenovo\\Desktop\\GitHub\\Programacion-A1\\A1\\A1\\A1.csproj",
               "RelativeToolTip": "A1\\A1.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-04-04T00:22:27.947Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-04T00:22:27.947Z"
             },
             {
               "$type": "Document",
@@ -82,7 +78,7 @@
               "RelativeDocumentMoniker": "A1\\Chat.html",
               "ToolTip": "C:\\Users\\Lenovo\\Desktop\\GitHub\\Programacion-A1\\A1\\A1\\Chat.html",
               "RelativeToolTip": "A1\\Chat.html",
-              "ViewState": "AQIAAAUBAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAOcAAAAAAAAAAAAAAPwAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2024-04-04T00:19:19.653Z",
               "EditorCaption": ""

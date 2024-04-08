@@ -19,6 +19,15 @@
                     scriptText.textContent = scriptContent;
                 }
             }
+            const css = document.getElementById("css");
+            if (css) {
+                let cssContent = css.textContent;
+                let cssText = document.getElementById('cssText');
+                if (cssText) {
+                    cssText.textContent = cssContent;
+
+                }
+            }
         }
         )
     </script>
@@ -209,6 +218,10 @@
 
             let eCharacter = entrada[indiceDialogo].personaje + ":";
             let eText = entrada[indiceDialogo].texto;
+            console.log("Diáglogo");
+            console.log(eCharacter);
+            console.log(eText);
+
 
             let eColor = entrada[indiceDialogo].color;
             item1.style.backgroundColor = eColor;
@@ -234,10 +247,10 @@
 
             contenedor.appendChild(item1);
 
-           
+
 
             indiceDialogo++
-            console.log(indiceDialogo);
+            console.log("indiceDialgo: " + indiceDialogo);
 
             //   NOTAS     appendChild
 
@@ -254,9 +267,8 @@
         }
 
 
-
     </script>
-    <style>
+    <style id="css" type="text/css">
         .itemDialogo {
             background-color: red;
             margin-left: 25px;
@@ -320,8 +332,10 @@
 
     </div>
     <button onclick="leerSiguiente(dialogo)" class="bonton">Continuar</button>
-    <h2 class="press-start-2p-regular subTittle">Código</h2><br />
+    <h2 class="press-start-2p-regular subTittle">Código HTML</h2><br />
     <pre id="scriptText" class="scriptTextClass"></pre><br />
+    <h2 class="press-start-2p-regular">CSS</h2>
+    <pre id="cssText" ></pre>
 
 </body>
 </html>
