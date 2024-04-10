@@ -37,7 +37,8 @@
         var colorShenzi = "#9575CD";
         var colorScar = "#D32F2F";
         var colorConjunto = "#9E9E9E"
-
+        /*var pruebaSrc =
+            <img src="img/Banzai.jpeg" />*/
         var dialogo = [ //autocompletado con IA pq es un chingo
             {
                 personaje: "Banzai",
@@ -95,7 +96,7 @@
                 texto: "Y además son tan..."
             },
             {
-                personaje: "Los dos",      // Dialogo de 2 personajes, tener cuidado al usar
+                personaje: "Ambos",      // Dialogo de 2 personajes, tener cuidado al usar
                 color: colorConjunto,
                 texto: "Feos (los dos se matan de la risa, cuando son interrumpidas por Scar)"
             },
@@ -212,9 +213,11 @@
 
             let contenedor = document.getElementById("contenedorDialogo");
 
+            let cuadroDialogo = document.createElement("div");
             let item1 = document.createElement("div");
             item1.setAttribute("id", "item" + indiceDialogo);
             item1.classList.add("itemDialogo");
+            item1.style.display = "flex";
 
             let eCharacter = entrada[indiceDialogo].personaje + ":";
             let eText = entrada[indiceDialogo].texto;
@@ -245,7 +248,21 @@
             console.log("length: " + entrada.length);
 
 
-            contenedor.appendChild(item1);
+            cuadroDialogo.appendChild(item1);
+
+            let icono = document.createElement("img");
+            console.log("img/" + entrada[indiceDialogo].personaje + ".jpeg");
+            icono.src = "img/" + entrada[indiceDialogo].personaje + ".jpeg";
+            icono.style.borderRadius = "92px";
+            icono.style.height = "92px";
+            icono.style.width = "92px";
+            icono.style.objectFit = "cover";
+            //item1.appendChild(icono);
+            item1.insertBefore(icono, label);
+
+
+            
+            contenedor.appendChild(cuadroDialogo);
 
 
 
@@ -284,16 +301,20 @@
             background-color: #263238;
             position: center;
             justify-content: center;
-            height: 500px;
+            height: 550px;
             width: 450px;
             border-style: solid;
             border-width: 5px;
             border-color: #455A64;
+            align-items: center;
+            margin-right: 100px;
         }
 
         .bonton {
-            background-color: #29B6F6;
+            background-color: #212363;
             color: #E0E0E0;
+            font-size: 20px;
+            
         }
 
         .tono1 {
@@ -331,7 +352,7 @@
         <br />
 
     </div>
-    <button onclick="leerSiguiente(dialogo)" class="bonton">Continuar</button>
+    <button onclick="leerSiguiente(dialogo)" class="bonton press-start-2p-regular">Continuar</button>
     <h2 class="press-start-2p-regular subTittle">Código HTML</h2><br />
     <pre id="scriptText" class="scriptTextClass"></pre><br />
     <h2 class="press-start-2p-regular">CSS</h2>
