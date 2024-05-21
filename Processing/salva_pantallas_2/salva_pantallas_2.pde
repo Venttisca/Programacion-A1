@@ -21,8 +21,8 @@ void setup(){
   size(1000,750);
   limiteAncho = anchoLienzo - (sizeCircleX/2);
   limiteAlto = altoLienzo - (sizeCircleY/2);
-  int numeroAleatorioY = int(random(0, limiteAlto)); 
-  int numeroAleatorioX = int(random(0, limiteAncho));
+  int numeroAleatorioY = int(random(0, limiteAlto - sizeCircleY)); 
+  int numeroAleatorioX = int(random(0, limiteAncho - sizeCircleX));
   stroke(#E0E0E0);
   fill(#E0E0E0);
   status = "no iniciado";
